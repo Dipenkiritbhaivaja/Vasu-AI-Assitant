@@ -7,6 +7,7 @@ shutdown, and shared resources.
 
 from __future__ import annotations
 
+from assistant.core.config import ConfigurationManager
 from assistant.core.logger import LoggerManager
 
 
@@ -17,6 +18,9 @@ class ApplicationController:
 
     def __init__(self) -> None:
         self.logger = LoggerManager.get_logger(self.__class__.__name__)
+
+        # Shared configuration for the whole application
+        self.config = ConfigurationManager()
 
     def start(self) -> None:
         """

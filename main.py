@@ -1,15 +1,8 @@
-from assistant.core.controller import ApplicationController
+from assistant.core.config import ConfigurationManager
 
+config = ConfigurationManager()
 
-def main() -> None:
-    app = ApplicationController()
-
-    app.start()
-
-    # Future modules will run here.
-
-    app.stop()
-
-
-if __name__ == "__main__":
-    main()
+print(config.get("assistant.name"))
+print(config.get("assistant.version"))
+print(config.get("database.path"))
+print(config.get("voice.language"))

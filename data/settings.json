@@ -1,0 +1,24 @@
+{
+    "assistant": {
+        "name": "VASU AI ASSISTANT",
+        "version": "1.0.0",
+        "debug": false
+    },
+
+    "logging": {
+        "level": "INFO"
+    },
+
+    "database": {
+        "path": "data/vasu_ai.db"
+    },
+
+    "monitoring": {
+        "refresh_interval": 5
+    },
+
+    "voice": {
+        "enabled": false,
+        "language": "en-IN"
+    }
+}
