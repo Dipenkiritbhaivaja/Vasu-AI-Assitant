@@ -1,0 +1,19 @@
+{
+    "applications": [
+        {
+            "name": "notepad",
+            "executable": "notepad.exe",
+            "aliases": [
+                "notepad"
+            ]
+        },
+        {
+            "name": "calculator",
+            "executable": "calc.exe",
+            "aliases": [
+                "calculator",
+                "calc"
+            ]
+        }
+    ]
+}

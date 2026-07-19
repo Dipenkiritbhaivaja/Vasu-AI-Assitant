@@ -71,3 +71,21 @@
 2026-07-19 13:54:59,814 | INFO     | DatabaseManager | Verified 'memories' table exists.
 2026-07-19 13:54:59,814 | INFO     | DatabaseManager | Database connected successfully.
 2026-07-19 13:54:59,815 | INFO     | DatabaseManager | Database connection closed.
+2026-07-19 14:35:07,226 | INFO     | CommandManager | Executing command 'open'.
+2026-07-19 14:35:07,227 | INFO     | OpenApplicationHandler | Received request to open 'chrome'.
+2026-07-19 14:35:07,227 | INFO     | CommandManager | Executing command 'open'.
+2026-07-19 14:35:07,228 | INFO     | OpenApplicationHandler | Received request to open 'vscode'.
+2026-07-19 14:35:07,228 | INFO     | CommandManager | Executing command 'open'.
+2026-07-19 14:35:07,228 | INFO     | OpenApplicationHandler | Received request to open 'notepad'.
+2026-07-19 14:37:08,825 | INFO     | CommandManager | Executing command 'open'.
+2026-07-19 14:37:08,825 | INFO     | OpenApplicationHandler | Received request to open 'chrome'.
+2026-07-19 14:37:08,826 | INFO     | CommandManager | Executing command 'open'.
+2026-07-19 14:37:08,826 | INFO     | OpenApplicationHandler | Received request to open 'vscode'.
+2026-07-19 14:37:08,827 | INFO     | CommandManager | Executing command 'open'.
+2026-07-19 14:37:08,827 | INFO     | OpenApplicationHandler | Received request to open 'notepad'.
+2026-07-19 15:21:50,511 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-19 15:38:44,148 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-19 15:40:18,679 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-19 15:42:26,933 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-19 15:42:26,933 | INFO     | CommandManager | Executing command 'open'.
+2026-07-19 15:42:26,934 | INFO     | OpenApplicationHandler | Opening application 'notepad'.
