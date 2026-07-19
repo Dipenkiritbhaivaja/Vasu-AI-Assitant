@@ -82,14 +82,62 @@ class MemoryRepository:
             for row in rows
         ]
 
-    def update(self, memory: MemoryRecord) -> None:
+    def update(
+        self,
+        memory: MemoryRecord,
+    ) -> bool:
         """
         Update an existing memory.
-        """
-        raise NotImplementedError
 
-    def delete(self, memory_id: int) -> None:
+        Returns:
+            True if a row was updated.
+            False if the memory does not exist.
         """
-        Delete a memory.
+
+        if memory.id is None:
+            raise ValueError(
+                "Cannot update a memory without an ID."
+            )
+
+        cursor = self._database.execute(
+            """
+            UPDATE memories
+            SET
+                title = ?,
+                content = ?,
+                category = ?,
+                updated_at = ?
+            WHERE id = ?
+            """,
+            (
+                memory.title,
+                memory.content,
+                memory.category,
+                memory.updated_at.isoformat(),
+                memory.id,
+            ),
+        )
+
+        return cursor.rowcount > 0
+
+    def delete(
+        self,
+        memory_id: int,
+    ) -> bool:
         """
-        raise NotImplementedError
+        Delete a memory by its ID.
+
+        Returns:
+            True if a memory was deleted.
+            False if no matching memory exists.
+        """
+
+        cursor = self._database.execute(
+            """
+            DELETE FROM memories
+            WHERE id = ?
+            """,
+            (memory_id,),
+        )
+
+        return cursor.rowcount > 0
