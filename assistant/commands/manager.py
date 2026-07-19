@@ -4,14 +4,23 @@ Command Manager for VASU AI ASSISTANT.
 
 from __future__ import annotations
 
-from assistant.commands.parser import CommandParser
-from assistant.commands.handlers.base import BaseCommandHandler
+from assistant.applications.manager import (
+    ApplicationManager,
+)
+from assistant.commands.exceptions import (
+    CommandHandlerError,
+)
+from assistant.commands.handlers.base import (
+    BaseCommandHandler,
+)
 from assistant.commands.handlers.open_handler import (
     OpenApplicationHandler,
 )
-from assistant.core.logger import LoggerManager
-from assistant.commands.exceptions import (
-    CommandHandlerError,
+from assistant.commands.parser import (
+    CommandParser,
+)
+from assistant.core.logger import (
+    LoggerManager,
 )
 
 
@@ -20,7 +29,10 @@ class CommandManager:
     Coordinates command parsing and execution.
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        application_manager: ApplicationManager,
+    ) -> None:
 
         self._logger = LoggerManager.get_logger(
             self.__class__.__name__
@@ -28,11 +40,15 @@ class CommandManager:
 
         self._parser = CommandParser()
 
+        self._application_manager = application_manager
+
         self._handlers: dict[
             str,
             BaseCommandHandler,
         ] = {
-            "open": OpenApplicationHandler(),
+            "open": OpenApplicationHandler(
+                self._application_manager,
+            ),
         }
 
     def execute(

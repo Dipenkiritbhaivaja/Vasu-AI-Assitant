@@ -1,5 +1,16 @@
-from assistant.commands.manager import CommandManager
+from assistant.applications.manager import (
+    ApplicationManager,
+)
+from assistant.commands.manager import (
+    CommandManager,
+)
 
-manager = CommandManager()
+application_manager = ApplicationManager(
+    "data/applications.json"
+)
 
-manager.execute("open notepad")
+command_manager = CommandManager(
+    application_manager,
+)
+
+command_manager.execute("open notepad")

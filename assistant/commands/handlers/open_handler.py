@@ -17,14 +17,16 @@ class OpenApplicationHandler(BaseCommandHandler):
     Handles opening applications.
     """
 
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        application_manager: ApplicationManager,
+    ) -> None:
+
         self._logger = LoggerManager.get_logger(
             self.__class__.__name__
         )
 
-        self._application_manager = ApplicationManager(
-            "data/applications.json"
-        )
+        self._application_manager = application_manager
 
     def execute(
         self,
