@@ -1,20 +1,29 @@
 """
-Handler for the 'open' command.
+Handler for the 'close' command.
 """
 
 from __future__ import annotations
 
-from assistant.applications.service import ApplicationService
+from assistant.applications.manager import (
+    ApplicationManager,
+)
+from assistant.applications.service import (
+    ApplicationService,
+)
+from assistant.commands.handlers.base import (
+    BaseCommandHandler,
+)
+from assistant.commands.models import (
+    Command,
+)
+from assistant.core.logger import (
+    LoggerManager,
+)
 
-from assistant.applications.manager import ApplicationManager
-from assistant.commands.handlers.base import BaseCommandHandler
-from assistant.commands.models import Command
-from assistant.core.logger import LoggerManager
 
-
-class OpenApplicationHandler(BaseCommandHandler):
+class CloseApplicationHandler(BaseCommandHandler):
     """
-    Handles opening applications.
+    Handles closing applications.
     """
 
     def __init__(
@@ -28,16 +37,12 @@ class OpenApplicationHandler(BaseCommandHandler):
         )
 
         self._application_manager = application_manager
-
         self._application_service = application_service
 
     def execute(
         self,
         command: Command,
     ) -> None:
-        """
-        Execute the open command.
-        """
 
         if command.target is None:
             raise ValueError(
@@ -49,10 +54,10 @@ class OpenApplicationHandler(BaseCommandHandler):
         )
 
         self._logger.info(
-            "Opening application '%s'.",
+            "Closing application '%s'.",
             application.name,
         )
 
-        self._application_service.launch(
+        self._application_service.close(
             application
         )

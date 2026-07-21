@@ -7,6 +7,9 @@ from __future__ import annotations
 from assistant.applications.manager import (
     ApplicationManager,
 )
+from assistant.applications.service import (
+    ApplicationService,
+)
 from assistant.commands.exceptions import (
     CommandHandlerError,
 )
@@ -22,6 +25,21 @@ from assistant.commands.parser import (
 from assistant.core.logger import (
     LoggerManager,
 )
+from assistant.commands.handlers.close_handler import (
+    CloseApplicationHandler,
+)
+from assistant.commands.handlers.help_handler import (
+    HelpCommandHandler,
+)
+from assistant.commands.command_info import (
+    CommandInfo,
+)
+from assistant.commands.handlers.restart_handler import (
+    RestartApplicationHandler,
+)
+from assistant.commands.handlers.list_applications_handler import (
+    ListApplicationsHandler,
+)
 
 
 class CommandManager:
@@ -32,6 +50,7 @@ class CommandManager:
     def __init__(
         self,
         application_manager: ApplicationManager,
+        application_service: ApplicationService,
     ) -> None:
 
         self._logger = LoggerManager.get_logger(
@@ -41,13 +60,47 @@ class CommandManager:
         self._parser = CommandParser()
 
         self._application_manager = application_manager
+        self._application_service = application_service
 
-        self._handlers: dict[
+        self._commands: dict[
             str,
-            BaseCommandHandler,
+            CommandInfo,
         ] = {
-            "open": OpenApplicationHandler(
-                self._application_manager,
+            "open": CommandInfo(
+                handler=OpenApplicationHandler(
+                    self._application_manager,
+                    self._application_service,
+                ),
+                usage="open <application>",
+                description="Open a registered application.",
+            ),
+            "close": CommandInfo(
+                handler=CloseApplicationHandler(
+                    self._application_manager,
+                    self._application_service,
+                ),
+                usage="close <application>",
+                description="Close a running application.",
+            ),
+            "help": CommandInfo(
+                handler=HelpCommandHandler(),
+                usage="help",
+                description="Show available commands.",
+            ),
+            "restart": CommandInfo(
+                handler=RestartApplicationHandler(
+                    self._application_manager,
+                    self._application_service,
+                ),
+                usage="restart <application>",
+                description="Restart a registered application.",
+            ),
+            "list": CommandInfo(
+                handler=ListApplicationsHandler(
+                    self._application_manager,
+                ),
+                usage="list applications",
+                description="List all registered applications.",
             ),
         }
 
@@ -61,13 +114,13 @@ class CommandManager:
 
         command = self._parser.parse(text)
 
-        handler = self._handlers.get(
+        command_info = self._commands.get(
             command.action
         )
 
-        if handler is None:
+        if command_info is None:
             raise CommandHandlerError(
-                f"No handler registered for '{command.action}'."
+                f"Unknown command: '{command.action}'."
             )
 
         self._logger.info(
@@ -75,4 +128,13 @@ class CommandManager:
             command.action,
         )
 
-        handler.execute(command)
+        command_info.handler.execute(command)
+
+    def get_registered_commands(
+        self,
+    ) -> dict[str, CommandInfo]:
+        """
+        Return all registered commands.
+        """
+
+        return self._commands

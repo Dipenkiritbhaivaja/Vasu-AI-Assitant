@@ -84,5 +84,16 @@ class ApplicationManager:
                 return application
 
         raise ApplicationNotFoundError(
-            f"Application '{name}' is not registered."
+            f"Unknown application: '{name}'."
+        )
+    
+    def get_all(
+        self,
+    ) -> list[Application]:
+        """
+        Return all registered applications.
+        """
+
+        return list(
+            self._applications.values()
         )

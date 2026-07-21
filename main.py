@@ -1,16 +1,10 @@
-from assistant.applications.manager import (
-    ApplicationManager,
-)
-from assistant.commands.manager import (
-    CommandManager,
-)
+from assistant.core.controller import ApplicationController
 
-application_manager = ApplicationManager(
-    "data/applications.json"
-)
 
-command_manager = CommandManager(
-    application_manager,
-)
+def main() -> None:
+    controller = ApplicationController()
+    controller.run()
 
-command_manager.execute("open notepad")
+
+if __name__ == "__main__":
+    main()
