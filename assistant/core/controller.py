@@ -14,6 +14,7 @@ from assistant.applications.service import ApplicationService
 from assistant.interfaces.console import (
     ConsoleInterface,
 )
+from assistant.browser.service import BrowserService
 
 class ApplicationController:
     """
@@ -30,11 +31,13 @@ class ApplicationController:
             "data/applications.json"
         )
 
-        self.application_launcher = ApplicationService()
+        self.application_service = ApplicationService()
+        self.browser_service = BrowserService()
 
         self.command_manager: CommandManager = CommandManager(
             self.application_manager,
-            self.application_launcher,
+            self.application_service,
+            self.browser_service,
         )
 
         self.console = ConsoleInterface(

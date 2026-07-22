@@ -3,17 +3,30 @@
         {
             "name": "notepad",
             "executable": "notepad.exe",
+            "process_name": "Notepad.exe",
             "aliases": [
-                "notepad"
-            ]
+                "notepad",
+                "notpad",
+                "notpade",
+                "notpde",
+                "notpaade"
+            ],
+            "arguments": [],
+            "working_directory": null,
+            "run_as_admin": false
         },
         {
             "name": "calculator",
             "executable": "calc.exe",
+            "process_name": "CalculatorApp.exe",
             "aliases": [
                 "calculator",
-                "calc"
-            ]
+                "calc",
+                "clc"
+            ],
+            "arguments": [],
+            "working_directory": null,
+            "run_as_admin": false
         }
     ]
 }

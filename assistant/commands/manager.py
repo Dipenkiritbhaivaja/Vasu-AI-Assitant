@@ -40,6 +40,10 @@ from assistant.commands.handlers.restart_handler import (
 from assistant.commands.handlers.list_applications_handler import (
     ListApplicationsHandler,
 )
+from assistant.commands.handlers.status_handler import (
+    StatusApplicationHandler,
+)
+from assistant.browser.service import BrowserService
 
 
 class CommandManager:
@@ -51,6 +55,7 @@ class CommandManager:
         self,
         application_manager: ApplicationManager,
         application_service: ApplicationService,
+        browser_service: BrowserService,
     ) -> None:
 
         self._logger = LoggerManager.get_logger(
@@ -61,6 +66,7 @@ class CommandManager:
 
         self._application_manager = application_manager
         self._application_service = application_service
+        self._browser_service = browser_service
 
         self._commands: dict[
             str,
@@ -70,6 +76,7 @@ class CommandManager:
                 handler=OpenApplicationHandler(
                     self._application_manager,
                     self._application_service,
+                    self._browser_service,
                 ),
                 usage="open <application>",
                 description="Open a registered application.",
@@ -101,6 +108,14 @@ class CommandManager:
                 ),
                 usage="list applications",
                 description="List all registered applications.",
+            ),
+            "status": CommandInfo(
+                handler=StatusApplicationHandler(
+                    self._application_manager,
+                    self._application_service,
+                ),
+                usage="status <application>",
+                description="Show whether an application is running.",
             ),
         }
 

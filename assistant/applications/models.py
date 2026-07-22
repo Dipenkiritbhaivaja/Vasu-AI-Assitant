@@ -10,11 +10,15 @@ from dataclasses import dataclass, field
 @dataclass(slots=True)
 class Application:
     """
-    Represents an application that VASU can launch.
+    Represents a registered application.
     """
 
     name: str
-
     executable: str
-
-    aliases: list[str] = field(default_factory=list)
+    process_name: str
+    aliases: list[str]
+    arguments: list[str] = field(
+        default_factory=list
+    )
+    working_directory: str | None = None
+    run_as_admin: bool = False

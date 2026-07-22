@@ -10,7 +10,11 @@ from assistant.applications.manager import ApplicationManager
 from assistant.commands.handlers.base import BaseCommandHandler
 from assistant.commands.models import Command
 from assistant.core.logger import LoggerManager
+from assistant.browser.service import BrowserService
 
+from assistant.applications.exceptions import (
+    ApplicationNotFoundError,
+)
 
 class OpenApplicationHandler(BaseCommandHandler):
     """
@@ -21,15 +25,15 @@ class OpenApplicationHandler(BaseCommandHandler):
         self,
         application_manager: ApplicationManager,
         application_service: ApplicationService,
+        browser_service: BrowserService,
     ) -> None:
 
         self._logger = LoggerManager.get_logger(
             self.__class__.__name__
         )
-
         self._application_manager = application_manager
-
         self._application_service = application_service
+        self._browser_service = browser_service
 
     def execute(
         self,
@@ -44,15 +48,29 @@ class OpenApplicationHandler(BaseCommandHandler):
                 "No application specified."
             )
 
-        application = self._application_manager.find(
-            command.target
-        )
+        try:
+            application = self._application_manager.find(
+                command.target
+            )
 
-        self._logger.info(
-            "Opening application '%s'.",
-            application.name,
-        )
+            if self._application_service.is_running(
+                application
+            ):
+                print(
+                    f"\nApplication '{application.name}' is already running.\n"
+                )
+                return
 
-        self._application_service.launch(
-            application
-        )
+            self._logger.info(
+                "Opening application '%s'.",
+                application.name,
+            )
+
+            self._application_service.launch(
+                application
+            )
+
+        except ApplicationNotFoundError:
+            self._browser_service.open_url(
+                command.target
+            )

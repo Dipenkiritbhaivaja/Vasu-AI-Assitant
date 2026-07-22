@@ -31,6 +31,7 @@ class HelpCommandHandler(BaseCommandHandler):
         print("  open <application>")
         print("  close <application>")
         print("  restart <application>")
+        print("  status <application>")
 
         print()
 

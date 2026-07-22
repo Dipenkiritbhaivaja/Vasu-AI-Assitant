@@ -51,11 +51,17 @@ class ApplicationManager:
         for item in data["applications"]:
 
             application = Application(
-                name=item["name"],
-                executable=item["executable"],
-                aliases=item["aliases"],
-            )
-
+            name=item["name"],
+            executable=item["executable"],
+            process_name=item.get(
+                "process_name",
+                item["executable"],
+            ),
+            aliases=item["aliases"],
+            arguments=item.get("arguments", []),
+            working_directory=item.get("working_directory"),
+            run_as_admin=item.get("run_as_admin", False),
+        )
             self._applications[
                 application.name
             ] = application

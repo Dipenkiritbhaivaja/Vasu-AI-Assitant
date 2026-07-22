@@ -53,6 +53,14 @@ class CloseApplicationHandler(BaseCommandHandler):
             command.target
         )
 
+        if not self._application_service.is_running(
+            application
+        ):
+            print(
+                f"\nApplication '{application.name}' is already closed.\n"
+            )
+            return
+
         self._logger.info(
             "Closing application '%s'.",
             application.name,

@@ -40,8 +40,14 @@ class ApplicationService:
             application.name,
         )
 
+        command = [
+            application.executable,
+            *application.arguments,
+        ]
+
         subprocess.Popen(
-            [application.executable]
+            command,
+            cwd=application.working_directory,
         )
 
     def close(
@@ -63,12 +69,12 @@ class ApplicationService:
         for process in psutil.process_iter(
             ["pid", "name"]
         ):
-
+            
             process_name = (
                 process.info["name"] or ""
             ).lower()
 
-            if process_name != application.executable.lower():
+            if process_name != application.process_name.lower():
                 continue
 
             process.terminate()
@@ -92,6 +98,35 @@ class ApplicationService:
             "Application '%s' is not running.",
             application.name,
         )
+    
+    def is_running(
+        self,
+        application: Application,
+    ) -> bool:
+        """
+        Check whether an application is running.
+
+        Args:
+            application: Application to check.
+
+        Returns:
+            True if running, otherwise False.
+        """
+
+        executable = application.process_name.lower()
+
+        for process in psutil.process_iter(
+            ["name"]
+        ):
+            process_name = process.info["name"]
+
+            if process_name is None:
+                continue
+
+            if process_name.lower() == executable:
+                return True
+
+        return False
 
     def restart(
         self,
