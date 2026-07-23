@@ -1,0 +1,264 @@
+2026-07-23 22:46:01,115 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-23 22:46:01,116 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-23 22:46:01,116 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-23 22:46:01,116 | INFO     | ConsoleInterface | Console interface started.
+2026-07-23 22:46:03,969 | INFO     | CommandManager | Executing command 'find'.
+2026-07-23 22:46:03,969 | INFO     | FileManager | Searching for 'test'.
+2026-07-23 22:46:03,969 | INFO     | FileService | Searching 'test' under 'D:\MyProjects\Vasu-AI-Assitant'.
+2026-07-23 22:46:03,997 | INFO     | FileService | Found 1 matching item(s).
+2026-07-23 22:56:51,674 | INFO     | CommandManager | Executing command 'find'.
+2026-07-23 22:56:51,676 | INFO     | FileManager | Searching for 'testpython'.
+2026-07-23 22:56:51,676 | INFO     | FileService | Searching 'testpython' under 'D:\MyProjects\Vasu-AI-Assitant'.
+2026-07-23 22:56:51,698 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 22:57:09,737 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-23 22:57:09,737 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-23 22:57:09,737 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-23 22:57:09,737 | INFO     | ConsoleInterface | Console interface started.
+2026-07-23 22:57:14,923 | INFO     | CommandManager | Executing command 'find'.
+2026-07-23 22:57:14,923 | INFO     | FileManager | Searching for 'test'.
+2026-07-23 22:57:14,924 | INFO     | FileService | Searching 'test' under 'D:\MyProjects\Vasu-AI-Assitant'.
+2026-07-23 22:57:14,943 | INFO     | FileService | Found 1 matching item(s).
+2026-07-23 23:06:27,171 | INFO     | CommandManager | Executing command 'find'.
+2026-07-23 23:06:27,171 | INFO     | FileManager | Searching for 'test'.
+2026-07-23 23:06:27,171 | INFO     | FileService | Searching 'test' under 'D:\MyProjects\Vasu-AI-Assitant'.
+2026-07-23 23:06:27,188 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:06:37,733 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-23 23:06:37,733 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-23 23:06:37,734 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-23 23:06:37,734 | INFO     | ConsoleInterface | Console interface started.
+2026-07-23 23:06:42,735 | INFO     | CommandManager | Executing command 'find'.
+2026-07-23 23:06:42,735 | INFO     | FileManager | Searching for 'resume'.
+2026-07-23 23:06:42,736 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-07-23 23:06:42,736 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\Documents'.
+2026-07-23 23:06:42,737 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:06:42,738 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-07-23 23:06:42,738 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\Downloads'.
+2026-07-23 23:06:42,738 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:06:42,738 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-07-23 23:06:42,738 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\Videos'.
+2026-07-23 23:06:42,739 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:23:21,026 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-23 23:23:21,027 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-23 23:23:21,027 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-23 23:23:21,027 | INFO     | ConsoleInterface | Console interface started.
+2026-07-23 23:23:32,839 | INFO     | CommandManager | Executing command 'find'.
+2026-07-23 23:23:32,839 | INFO     | FileManager | Searching for 'resume'.
+2026-07-23 23:23:32,840 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-07-23 23:23:32,841 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-07-23 23:23:32,842 | INFO     | FileService | Found 1 matching item(s).
+2026-07-23 23:23:32,842 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-07-23 23:23:32,843 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\Documents'.
+2026-07-23 23:23:32,843 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:23:32,844 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-07-23 23:23:32,844 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\Downloads'.
+2026-07-23 23:23:32,844 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:23:32,844 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-07-23 23:23:32,844 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-07-23 23:23:32,847 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:23:32,847 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-07-23 23:23:32,847 | INFO     | FileService | Searching 'resume' under 'C:\Users\Dell\Videos'.
+2026-07-23 23:23:32,848 | INFO     | FileService | Found 0 matching item(s).
+2026-07-23 23:39:02,120 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-23 23:39:02,120 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-23 23:39:02,120 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-23 23:39:02,120 | INFO     | ConsoleInterface | Console interface started.
+2026-07-23 23:39:04,848 | INFO     | CommandManager | Executing command 'open'.
+2026-07-23 23:39:04,859 | INFO     | OpenApplicationHandler | Opening application 'notepad'.
+2026-07-23 23:39:04,860 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-23 23:39:52,773 | INFO     | CommandManager | Executing command 'list'.
+2026-07-23 23:40:02,886 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:40:02,887 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:40:34,772 | INFO     | CommandManager | Executing command 'open'.
+2026-07-23 23:40:34,773 | INFO     | OpenApplicationHandler | Opening application 'calculator'.
+2026-07-23 23:40:34,773 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-07-23 23:40:52,405 | INFO     | CommandManager | Executing command 'close'.
+2026-07-23 23:41:11,285 | INFO     | CommandManager | Executing command 'close'.
+2026-07-23 23:41:11,286 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-07-23 23:41:11,286 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-07-23 23:41:11,312 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-07-23 23:41:37,124 | INFO     | CommandManager | Executing command 'close'.
+2026-07-23 23:42:12,712 | INFO     | CommandManager | Executing command 'open'.
+2026-07-23 23:42:12,712 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\open_handler.py", line 47, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:42:24,988 | INFO     | CommandManager | Executing command 'close'.
+2026-07-23 23:42:24,988 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\close_handler.py", line 48, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:42:29,845 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:42:29,846 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:42:53,128 | INFO     | CommandManager | Executing command 'open'.
+2026-07-23 23:42:53,128 | INFO     | BrowserService | Opening URL 'https://youtube.com'.
+2026-07-23 23:45:31,808 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:45:31,809 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:45:43,275 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:45:43,276 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:45:51,645 | INFO     | CommandManager | Executing command 'help'.
+2026-07-23 23:46:01,392 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:46:01,392 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:46:08,982 | INFO     | ConsoleInterface | Console interface stopped.
+2026-07-23 23:46:08,982 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-07-23 23:46:12,538 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-23 23:46:12,538 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-23 23:46:12,539 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-23 23:46:12,539 | INFO     | ConsoleInterface | Console interface started.
+2026-07-23 23:46:16,009 | INFO     | CommandManager | Executing command 'open'.
+2026-07-23 23:46:16,010 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\open_handler.py", line 47, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:46:28,704 | INFO     | CommandManager | Executing command 'open'.
+2026-07-23 23:46:28,718 | INFO     | OpenApplicationHandler | Opening application 'notepad'.
+2026-07-23 23:46:28,718 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-23 23:46:35,424 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:46:35,424 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 160, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-23 23:46:44,887 | INFO     | CommandManager | Executing command 'help'.
+2026-07-23 23:46:58,372 | INFO     | CommandManager | Executing command 'restart'.
+2026-07-23 23:46:58,373 | INFO     | RestartApplicationHandler | Restarting application 'notepad'.
+2026-07-23 23:46:58,373 | INFO     | ApplicationService | Restarting application 'notepad'.
+2026-07-23 23:46:58,373 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-07-23 23:46:58,444 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-07-23 23:46:58,444 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-23 23:47:07,101 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:47:29,350 | INFO     | CommandManager | Executing command 'status'.
+2026-07-23 23:47:37,920 | INFO     | CommandManager | Executing command 'close'.
+2026-07-23 23:47:37,922 | INFO     | CloseApplicationHandler | Closing application 'notepad'.
+2026-07-23 23:47:37,922 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-07-23 23:47:37,975 | INFO     | ApplicationService | Application 'notepad' closed.

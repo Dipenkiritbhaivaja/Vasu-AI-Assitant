@@ -44,6 +44,14 @@ from assistant.commands.handlers.status_handler import (
     StatusApplicationHandler,
 )
 from assistant.browser.service import BrowserService
+from assistant.files.service import FileService
+from assistant.files.manager import FileManager
+from assistant.commands.handlers.find_file_handler import (
+    FindFileHandler,
+)
+from assistant.commands.command_key import (
+    CommandKey,
+)
 
 
 class CommandManager:
@@ -56,37 +64,45 @@ class CommandManager:
         application_manager: ApplicationManager,
         application_service: ApplicationService,
         browser_service: BrowserService,
-    ) -> None:
+    ) -> None: 
 
         self._logger = LoggerManager.get_logger(
             self.__class__.__name__
         )
-
         self._parser = CommandParser()
-
         self._application_manager = application_manager
         self._application_service = application_service
         self._browser_service = browser_service
+        self._file_service = FileService()
+        self._file_manager = FileManager(
+            self._file_service,
+        )
 
         self._commands: dict[
-            str,
+            CommandKey,
             CommandInfo,
         ] = {
-            "open": CommandInfo(
+            CommandKey(
+                "open",
+                "application",
+            ): CommandInfo(
                 handler=OpenApplicationHandler(
                     self._application_manager,
                     self._application_service,
                     self._browser_service,
                 ),
-                usage="open <application>",
+                usage="open application <application>",
                 description="Open a registered application.",
             ),
-            "close": CommandInfo(
+            CommandKey(
+                "close",
+                "application",
+            ): CommandInfo(
                 handler=CloseApplicationHandler(
                     self._application_manager,
                     self._application_service,
                 ),
-                usage="close <application>",
+                usage="close application <application>",
                 description="Close a running application.",
             ),
             "help": CommandInfo(
@@ -94,28 +110,47 @@ class CommandManager:
                 usage="help",
                 description="Show available commands.",
             ),
-            "restart": CommandInfo(
+            CommandKey(
+                "restart",
+                "application",
+            ): CommandInfo(
                 handler=RestartApplicationHandler(
                     self._application_manager,
                     self._application_service,
                 ),
-                usage="restart <application>",
+                usage="restart application <application>",
                 description="Restart a registered application.",
             ),
-            "list": CommandInfo(
+            CommandKey(
+                "list",
+                "applications",
+            ): CommandInfo(
                 handler=ListApplicationsHandler(
                     self._application_manager,
                 ),
                 usage="list applications",
                 description="List all registered applications.",
             ),
-            "status": CommandInfo(
+            CommandKey(
+                "status",
+                "applications",
+            ): CommandInfo(
                 handler=StatusApplicationHandler(
                     self._application_manager,
                     self._application_service,
                 ),
-                usage="status <application>",
+                usage="status application <application>",
                 description="Show whether an application is running.",
+            ),
+            CommandKey(
+                "find",
+                "file",
+            ): CommandInfo(
+                handler=FindFileHandler(
+                    self._file_manager,
+                ),
+                usage="find <file_name>",
+                description="Search for files.",
             ),
         }
 
@@ -129,8 +164,13 @@ class CommandManager:
 
         command = self._parser.parse(text)
 
+        command_key = CommandKey(
+            action=command.action,
+            resource=command.resource,
+        )
+
         command_info = self._commands.get(
-            command.action
+            command_key
         )
 
         if command_info is None:
@@ -147,7 +187,7 @@ class CommandManager:
 
     def get_registered_commands(
         self,
-    ) -> dict[str, CommandInfo]:
+    ) -> dict[CommandKey, CommandInfo]:
         """
         Return all registered commands.
         """

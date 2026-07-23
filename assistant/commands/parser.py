@@ -31,17 +31,22 @@ class CommandParser:
 
         action = parts[0]
 
+        resource = None
         target = None
         arguments = []
 
         if len(parts) >= 2:
-            target = parts[1]
+            resource = parts[1]
 
         if len(parts) >= 3:
-            arguments = parts[2:]
+            target = parts[2]
+
+        if len(parts) >= 4:
+            arguments = parts[3:]
 
         return Command(
             action=action,
+            resource=resource,
             target=target,
             arguments=arguments,
         )

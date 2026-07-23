@@ -17,5 +17,6 @@ class Command:
     """
 
     action: str
+    resource: str | None
     target: str | None = None
     arguments: list[str] = field(default_factory=list)
