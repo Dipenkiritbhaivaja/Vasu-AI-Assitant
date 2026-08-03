@@ -17,6 +17,13 @@ class HelpCommandHandler(BaseCommandHandler):
     Displays available commands.
     """
 
+    def __init__(
+        self,
+        command_manager,
+    ) -> None:
+
+        self._command_manager = command_manager
+
     def execute(
         self,
         command: Command,
@@ -27,15 +34,7 @@ class HelpCommandHandler(BaseCommandHandler):
         print("Available Commands")
         print("------------------")
 
-        print("Application")
-        print("  open <application>")
-        print("  close <application>")
-        print("  restart <application>")
-        print("  status <application>")
+        for info in self._command_manager.get_registered_commands().values():
+            print(f"  {info.usage}")
 
-        print()
-
-        print("General")
-        print("  help")
-        print("  exit")
         print()

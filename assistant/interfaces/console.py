@@ -13,6 +13,8 @@ from assistant.commands.exceptions import (
 from assistant.applications.exceptions import (
     ApplicationNotFoundError,
 )
+from assistant.commands.exceptions import InvalidCommandUsageError
+from assistant.nlp.processor import NLPProcessor
 
 class ConsoleInterface:
     """
@@ -30,6 +32,7 @@ class ConsoleInterface:
         )
 
         self._command_manager = command_manager
+        self._nlp = NLPProcessor()
 
     def run(self) -> None:
         """
@@ -55,14 +58,19 @@ class ConsoleInterface:
                 break
 
             try:
+                command = self._nlp.process(
+                    command,
+                )
+
                 self._command_manager.execute(
-                    command
+                    command,
                 )
 
             except (
                 CommandParseError,
                 CommandHandlerError,
                 ApplicationNotFoundError,
+                InvalidCommandUsageError
             ) as error:
                 print(error)
 

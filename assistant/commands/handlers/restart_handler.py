@@ -9,7 +9,7 @@ from assistant.applications.service import ApplicationService
 from assistant.commands.handlers.base import BaseCommandHandler
 from assistant.commands.models import Command
 from assistant.core.logger import LoggerManager
-
+from assistant.system.service import SystemService
 
 class RestartApplicationHandler(BaseCommandHandler):
     """
@@ -20,6 +20,7 @@ class RestartApplicationHandler(BaseCommandHandler):
         self,
         application_manager: ApplicationManager,
         application_service: ApplicationService,
+        system_service: SystemService,
     ) -> None:
 
         self._logger = LoggerManager.get_logger(
@@ -28,19 +29,33 @@ class RestartApplicationHandler(BaseCommandHandler):
 
         self._application_manager = application_manager
         self._application_service = application_service
+        self._system_service = system_service
 
     def execute(
         self,
         command: Command,
     ) -> None:
 
-        if command.target is None:
-            raise ValueError(
-                "No application specified."
+        target = self.require_target(
+            command,
+            "restart <target>",
+        )
+
+        if target.lower() in {
+            "pc",
+            "computer",
+            "system",
+        }:
+            self._logger.info(
+                "Restarting computer."
             )
 
+            self._system_service.restart()
+
+            return
+        
         application = self._application_manager.find(
-            command.target
+            target,
         )
 
         self._logger.info(

@@ -22,31 +22,26 @@ class CommandParser:
 
         text = text.strip().lower()
 
-        parts = text.split()
+        parts = text.strip().split()
 
         if not parts:
             raise CommandParseError(
                 "Command cannot be empty."
             )
 
-        action = parts[0]
+        action = parts[0].lower()
 
-        resource = None
         target = None
         arguments = []
 
         if len(parts) >= 2:
-            resource = parts[1]
+            target = parts[1]
 
         if len(parts) >= 3:
-            target = parts[2]
-
-        if len(parts) >= 4:
-            arguments = parts[3:]
+            arguments = parts[2:]
 
         return Command(
             action=action,
-            resource=resource,
             target=target,
             arguments=arguments,
         )

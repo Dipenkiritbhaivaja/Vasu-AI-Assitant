@@ -14,3 +14,9 @@ class CommandHandlerError(CommandError):
     Raised when no handler exists
     for a command.
     """
+
+class InvalidCommandUsageError(Exception):
+    """
+    Raised when the user provides an invalid
+    command or missing arguments.
+    """

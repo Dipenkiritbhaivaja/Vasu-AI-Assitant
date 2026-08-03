@@ -17,6 +17,27 @@ class Command:
     """
 
     action: str
-    resource: str | None
     target: str | None = None
     arguments: list[str] = field(default_factory=list)
+
+    @property
+    def text(
+        self,
+    ) -> str:
+        """
+        Return the full target text.
+
+        Example:
+            search python decorators
+            -> "python decorators"
+        """
+
+        if self.target is None:
+            return ""
+
+        return " ".join(
+            [
+                self.target,
+                *self.arguments,
+            ]
+        )

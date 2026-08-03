@@ -19,6 +19,7 @@ from assistant.commands.models import (
 from assistant.core.logger import (
     LoggerManager,
 )
+from assistant.commands.exceptions import InvalidCommandUsageError
 
 
 class CloseApplicationHandler(BaseCommandHandler):
@@ -45,8 +46,8 @@ class CloseApplicationHandler(BaseCommandHandler):
     ) -> None:
 
         if command.target is None:
-            raise ValueError(
-                "No application specified."
+            raise InvalidCommandUsageError(
+                "Usage: close <application>"
             )
 
         application = self._application_manager.find(

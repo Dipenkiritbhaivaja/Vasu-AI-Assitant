@@ -13,11 +13,8 @@ from assistant.applications.service import (
 from assistant.commands.exceptions import (
     CommandHandlerError,
 )
-from assistant.commands.handlers.base import (
-    BaseCommandHandler,
-)
-from assistant.commands.handlers.open_handler import (
-    OpenApplicationHandler,
+from assistant.commands.handlers.open_command_handler import (
+    OpenCommandHandler,
 )
 from assistant.commands.parser import (
     CommandParser,
@@ -44,15 +41,23 @@ from assistant.commands.handlers.status_handler import (
     StatusApplicationHandler,
 )
 from assistant.browser.service import BrowserService
-from assistant.files.service import FileService
 from assistant.files.manager import FileManager
 from assistant.commands.handlers.find_file_handler import (
     FindFileHandler,
 )
-from assistant.commands.command_key import (
-    CommandKey,
+from assistant.commands.handlers.search_command_handler import (
+    SearchCommandHandler,
 )
-
+from assistant.commands.handlers.play_command_handler import (
+    PlayCommandHandler,
+)
+from assistant.system.service import (
+    SystemService,
+)
+from assistant.commands.handlers.lock_command_handler import LockCommandHandler
+from assistant.commands.handlers.shutdown_command_handler import (
+    ShutdownCommandHandler,
+)
 
 class CommandManager:
     """
@@ -64,6 +69,8 @@ class CommandManager:
         application_manager: ApplicationManager,
         application_service: ApplicationService,
         browser_service: BrowserService,
+        file_manager: FileManager,
+        system_service: SystemService,
     ) -> None: 
 
         self._logger = LoggerManager.get_logger(
@@ -73,84 +80,94 @@ class CommandManager:
         self._application_manager = application_manager
         self._application_service = application_service
         self._browser_service = browser_service
-        self._file_service = FileService()
-        self._file_manager = FileManager(
-            self._file_service,
-        )
+        self._file_manager = file_manager
+        self._system_service = system_service
 
         self._commands: dict[
-            CommandKey,
+            str,
             CommandInfo,
         ] = {
-            CommandKey(
-                "open",
-                "application",
-            ): CommandInfo(
-                handler=OpenApplicationHandler(
+            "open": CommandInfo(
+                handler=OpenCommandHandler(
                     self._application_manager,
                     self._application_service,
                     self._browser_service,
+                    self._file_manager,
                 ),
-                usage="open application <application>",
+                usage="open <application>",
                 description="Open a registered application.",
             ),
-            CommandKey(
-                "close",
-                "application",
-            ): CommandInfo(
+            "close": CommandInfo(
                 handler=CloseApplicationHandler(
                     self._application_manager,
                     self._application_service,
                 ),
-                usage="close application <application>",
+                usage="close <application>",
                 description="Close a running application.",
             ),
             "help": CommandInfo(
-                handler=HelpCommandHandler(),
+                handler=HelpCommandHandler(self,),
                 usage="help",
                 description="Show available commands.",
             ),
-            CommandKey(
-                "restart",
-                "application",
-            ): CommandInfo(
+            "restart": CommandInfo(
                 handler=RestartApplicationHandler(
                     self._application_manager,
                     self._application_service,
+                    self._system_service,
                 ),
-                usage="restart application <application>",
+                usage="restart <application>",
                 description="Restart a registered application.",
             ),
-            CommandKey(
-                "list",
-                "applications",
-            ): CommandInfo(
+            "list": CommandInfo(
                 handler=ListApplicationsHandler(
                     self._application_manager,
                 ),
                 usage="list applications",
                 description="List all registered applications.",
             ),
-            CommandKey(
-                "status",
-                "applications",
-            ): CommandInfo(
+            "status": CommandInfo(
                 handler=StatusApplicationHandler(
                     self._application_manager,
                     self._application_service,
                 ),
-                usage="status application <application>",
+                usage="status <application>",
                 description="Show whether an application is running.",
             ),
-            CommandKey(
-                "find",
-                "file",
-            ): CommandInfo(
+            "find": CommandInfo(
                 handler=FindFileHandler(
                     self._file_manager,
                 ),
                 usage="find <file_name>",
                 description="Search for files.",
+            ),
+            "search": CommandInfo(
+                handler=SearchCommandHandler(
+                    self._browser_service,
+                ),
+                usage="search <query>",
+                description="Search Google.",
+            ),
+            "play": CommandInfo(
+                handler=PlayCommandHandler(
+                    self._browser_service,
+                ),
+                usage="play <query>",
+                description="Play videos on YouTube.",
+            ),
+            "lock": CommandInfo(
+                handler=LockCommandHandler(
+                    self._system_service,
+                ),
+                usage="lock",
+                description="Lock the computer.",
+            ),
+            "shutdown": CommandInfo(
+                handler=ShutdownCommandHandler(
+                    self._system_service,
+                ),
+                usage="shutdown",
+                description="Shut down the computer.",
             ),
         }
 
@@ -164,13 +181,8 @@ class CommandManager:
 
         command = self._parser.parse(text)
 
-        command_key = CommandKey(
-            action=command.action,
-            resource=command.resource,
-        )
-
         command_info = self._commands.get(
-            command_key
+            command.action
         )
 
         if command_info is None:
@@ -187,7 +199,7 @@ class CommandManager:
 
     def get_registered_commands(
         self,
-    ) -> dict[CommandKey, CommandInfo]:
+    ) -> dict[str, CommandInfo]:
         """
         Return all registered commands.
         """

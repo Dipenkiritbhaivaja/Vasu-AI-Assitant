@@ -34,20 +34,20 @@ class FindFileHandler(BaseCommandHandler):
         Execute the find command.
         """
 
-        if command.target is None:
-            raise ValueError(
-                "Usage: find <file_name>"
-            )
+        target = self.require_target(
+            command,
+            "find <file_name>",
+        )
 
         results = self._file_manager.search(
-            command.target,
+            target,
         )
 
         print()
 
         if not results:
             print(
-                f"No file found matching '{command.target}'."
+                f"No file found matching '{target}'."
             )
             print()
             return

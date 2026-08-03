@@ -262,3 +262,1033 @@ ValueError: No application specified.
 2026-07-23 23:47:37,922 | INFO     | CloseApplicationHandler | Closing application 'notepad'.
 2026-07-23 23:47:37,922 | INFO     | ApplicationService | Closing application 'notepad'.
 2026-07-23 23:47:37,975 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-07-24 22:27:35,447 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-24 22:27:35,448 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-24 22:29:24,401 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-24 22:29:24,401 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-24 22:29:24,401 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-24 22:29:24,401 | INFO     | ConsoleInterface | Console interface started.
+2026-07-24 22:43:05,718 | INFO     | CommandManager | Executing command 'open'.
+2026-07-24 22:43:05,733 | INFO     | OpenApplicationHandler | Opening application 'calculator'.
+2026-07-24 22:43:05,733 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-07-24 22:43:10,684 | INFO     | CommandManager | Executing command 'close'.
+2026-07-24 22:43:10,685 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-07-24 22:43:10,686 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-07-24 22:43:10,755 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-07-24 22:43:20,205 | INFO     | CommandManager | Executing command 'open'.
+2026-07-24 22:43:20,208 | INFO     | OpenApplicationHandler | Opening application 'notepad'.
+2026-07-24 22:43:20,208 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-24 22:43:24,875 | INFO     | CommandManager | Executing command 'close'.
+2026-07-24 22:43:24,876 | INFO     | CloseApplicationHandler | Closing application 'notepad'.
+2026-07-24 22:43:24,876 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-07-24 22:43:24,970 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-07-24 22:43:29,125 | INFO     | CommandManager | Executing command 'status'.
+2026-07-24 22:43:29,125 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 157, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-24 22:43:32,814 | INFO     | CommandManager | Executing command 'status'.
+2026-07-24 22:43:36,365 | INFO     | CommandManager | Executing command 'list'.
+2026-07-24 22:43:45,254 | INFO     | CommandManager | Executing command 'status'.
+2026-07-24 22:45:35,570 | INFO     | CommandManager | Executing command 'help'.
+2026-07-24 22:45:41,793 | INFO     | CommandManager | Executing command 'restart'.
+2026-07-24 22:45:41,793 | INFO     | RestartApplicationHandler | Restarting application 'notepad'.
+2026-07-24 22:45:41,793 | INFO     | ApplicationService | Restarting application 'notepad'.
+2026-07-24 22:45:41,793 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-07-24 22:45:41,795 | WARNING  | ApplicationService | Application 'notepad' is not running.
+2026-07-24 22:45:41,795 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-24 22:45:56,582 | INFO     | CommandManager | Executing command 'restart'.
+2026-07-24 22:45:56,582 | INFO     | RestartApplicationHandler | Restarting application 'notepad'.
+2026-07-24 22:45:56,582 | INFO     | ApplicationService | Restarting application 'notepad'.
+2026-07-24 22:45:56,582 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-07-24 22:45:56,621 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-07-24 22:45:56,622 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-24 22:46:03,180 | INFO     | CommandManager | Executing command 'status'.
+2026-07-24 22:46:03,180 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 157, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-24 22:46:07,342 | INFO     | CommandManager | Executing command 'open'.
+2026-07-24 22:46:07,342 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 157, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\open_handler.py", line 47, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-24 22:46:09,099 | INFO     | CommandManager | Executing command 'close'.
+2026-07-24 22:46:09,100 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 58, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 157, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\close_handler.py", line 48, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-24 23:44:47,640 | INFO     | ConsoleInterface | Console interface stopped.
+2026-07-24 23:44:47,641 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-07-24 23:44:58,109 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-24 23:44:58,109 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-24 23:44:58,109 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-24 23:44:58,110 | INFO     | ConsoleInterface | Console interface started.
+2026-07-24 23:45:02,725 | INFO     | CommandManager | Executing command 'open'.
+2026-07-24 23:45:05,212 | INFO     | CommandManager | Executing command 'close'.
+2026-07-24 23:45:15,014 | INFO     | CommandManager | Executing command 'restart'.
+2026-07-24 23:45:18,082 | INFO     | CommandManager | Executing command 'status'.
+2026-07-24 23:45:18,083 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "D:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 59, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "D:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 157, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\status_handler.py", line 38, in execute
+    raise ValueError(
+        "No application specified."
+    )
+ValueError: No application specified.
+2026-07-24 23:47:22,391 | INFO     | ConsoleInterface | Console interface stopped.
+2026-07-24 23:47:22,391 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-07-24 23:47:26,606 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-24 23:47:26,606 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-24 23:47:26,606 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-24 23:47:26,607 | INFO     | ConsoleInterface | Console interface started.
+2026-07-24 23:47:28,325 | INFO     | CommandManager | Executing command 'open'.
+2026-07-24 23:47:31,620 | INFO     | CommandManager | Executing command 'close'.
+2026-07-24 23:48:24,132 | INFO     | ConsoleInterface | Console interface stopped.
+2026-07-24 23:48:24,133 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-07-24 23:48:32,825 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-07-24 23:48:32,825 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-07-24 23:48:32,825 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-07-24 23:48:32,825 | INFO     | ConsoleInterface | Console interface started.
+2026-07-24 23:48:34,148 | INFO     | CommandManager | Executing command 'open'.
+2026-07-24 23:48:36,474 | INFO     | CommandManager | Executing command 'close'.
+2026-07-24 23:48:39,446 | INFO     | CommandManager | Executing command 'status'.
+2026-07-24 23:48:41,161 | INFO     | CommandManager | Executing command 'restart'.
+2026-07-24 23:48:44,739 | INFO     | CommandManager | Executing command 'open'.
+2026-07-24 23:48:44,748 | INFO     | OpenApplicationHandler | Opening application 'notepad'.
+2026-07-24 23:48:44,748 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-24 23:48:48,507 | INFO     | CommandManager | Executing command 'restart'.
+2026-07-24 23:48:52,634 | INFO     | CommandManager | Executing command 'restart'.
+2026-07-24 23:48:52,634 | INFO     | RestartApplicationHandler | Restarting application 'notepad'.
+2026-07-24 23:48:52,634 | INFO     | ApplicationService | Restarting application 'notepad'.
+2026-07-24 23:48:52,635 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-07-24 23:48:52,670 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-07-24 23:48:52,670 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-07-24 23:48:58,315 | INFO     | CommandManager | Executing command 'close'.
+2026-07-24 23:48:58,317 | INFO     | CloseApplicationHandler | Closing application 'notepad'.
+2026-07-24 23:48:58,318 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-07-24 23:48:58,362 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-07-24 23:49:01,642 | INFO     | ConsoleInterface | Console interface stopped.
+2026-07-24 23:49:01,642 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-01 18:01:31,966 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-01 18:01:31,967 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-01 18:01:31,967 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-01 18:01:31,967 | INFO     | ConsoleInterface | Console interface started.
+2026-08-01 18:01:35,380 | INFO     | CommandManager | Executing command 'open'.
+2026-08-01 18:01:35,394 | INFO     | OpenApplicationHandler | Opening application 'calculator'.
+2026-08-01 18:01:35,395 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-01 18:01:42,044 | INFO     | CommandManager | Executing command 'status'.
+2026-08-01 18:01:45,733 | INFO     | CommandManager | Executing command 'close'.
+2026-08-01 18:01:45,734 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-08-01 18:01:45,734 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-01 18:01:45,760 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-01 18:01:51,792 | INFO     | CommandManager | Executing command 'help'.
+2026-08-01 18:02:01,799 | INFO     | CommandManager | Executing command 'open'.
+2026-08-01 18:02:01,799 | INFO     | BrowserService | Opening URL 'https://youtube'.
+2026-08-01 18:02:16,561 | INFO     | CommandManager | Executing command 'open'.
+2026-08-01 18:02:16,562 | INFO     | BrowserService | Opening URL 'https://google'.
+2026-08-01 18:03:10,554 | INFO     | CommandManager | Executing command 'close'.
+2026-08-01 18:07:27,704 | INFO     | CommandManager | Executing command 'close'.
+2026-08-01 18:07:32,947 | INFO     | CommandManager | Executing command 'close'.
+2026-08-01 18:07:38,621 | INFO     | CommandManager | Executing command 'status'.
+2026-08-01 18:07:46,157 | INFO     | CommandManager | Executing command 'help'.
+2026-08-01 18:07:57,406 | INFO     | CommandManager | Executing command 'open'.
+2026-08-01 18:07:57,408 | INFO     | OpenApplicationHandler | Opening application 'calculator'.
+2026-08-01 18:07:57,408 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-01 18:08:17,132 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-01 18:08:17,132 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-01 18:15:26,837 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-01 18:15:26,838 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-01 18:15:26,838 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-01 18:15:26,838 | INFO     | ConsoleInterface | Console interface started.
+2026-08-01 18:15:29,849 | INFO     | CommandManager | Executing command 'open'.
+2026-08-01 18:15:29,866 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-01 18:15:29,866 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-01 18:15:38,219 | INFO     | CommandManager | Executing command 'restart'.
+2026-08-01 18:15:38,219 | INFO     | RestartApplicationHandler | Restarting application 'calculator'.
+2026-08-01 18:15:38,220 | INFO     | ApplicationService | Restarting application 'calculator'.
+2026-08-01 18:15:38,220 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-01 18:15:38,223 | WARNING  | ApplicationService | Application 'calculator' is not running.
+2026-08-01 18:15:38,223 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-01 18:15:44,265 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-01 18:15:44,265 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-01 18:24:47,629 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-01 18:24:47,629 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-01 18:24:47,629 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-01 18:24:47,629 | INFO     | ConsoleInterface | Console interface started.
+2026-08-01 18:24:51,316 | INFO     | CommandManager | Executing command 'open'.
+2026-08-01 18:24:51,329 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-01 18:24:51,330 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-01 18:24:54,427 | INFO     | CommandManager | Executing command 'close'.
+2026-08-01 18:24:54,428 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-08-01 18:24:54,428 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-01 18:24:54,455 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-01 18:24:56,212 | INFO     | CommandManager | Executing command 'restart'.
+2026-08-01 18:24:59,868 | INFO     | CommandManager | Executing command 'help'.
+2026-08-01 18:25:05,601 | INFO     | CommandManager | Executing command 'help'.
+2026-08-01 18:25:08,639 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-01 18:25:08,640 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-01 18:37:08,173 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-01 18:37:08,173 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-01 18:37:08,173 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-01 18:37:08,173 | INFO     | ConsoleInterface | Console interface started.
+2026-08-01 18:37:10,951 | INFO     | CommandManager | Executing command 'open'.
+2026-08-01 18:37:10,951 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 59, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 157, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\open_command_handler.py", line 65, in execute
+    if self._application_service.is_running(
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        result
+        ^^^^^^
+    ):
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\applications\service.py", line 116, in is_running
+    executable = application.process_name.lower()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'OpenResult' object has no attribute 'process_name'
+2026-08-02 20:26:15,388 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:26:15,389 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 20:26:15,389 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 20:26:15,389 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 20:26:18,467 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 20:26:18,482 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-02 20:26:18,482 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 20:26:23,307 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 20:26:23,308 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-08-02 20:26:23,308 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-02 20:26:23,338 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-02 20:26:25,599 | INFO     | CommandManager | Executing command 'status'.
+2026-08-02 20:26:31,471 | INFO     | CommandManager | Executing command 'status'.
+2026-08-02 20:26:35,160 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 20:26:35,161 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-02 20:26:35,161 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 20:26:39,246 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 20:26:39,248 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-08-02 20:26:39,248 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-02 20:26:39,282 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-02 20:26:41,728 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 20:26:41,729 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-02 20:26:41,730 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 20:26:47,958 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 20:26:55,318 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 20:26:55,319 | INFO     | BrowserService | Opening URL 'https://youtube'.
+2026-08-02 20:27:00,721 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 20:27:02,425 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-02 20:27:02,425 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-02 20:48:39,908 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:48:39,909 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 20:48:46,392 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:48:46,393 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 20:53:04,042 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:53:04,043 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 20:54:19,430 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:54:19,431 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 20:55:52,697 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:55:52,697 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 20:55:55,260 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:55:55,260 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 20:56:03,676 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 20:56:03,676 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 21:01:41,693 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 21:01:41,693 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 21:01:50,652 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 21:01:50,653 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:09:18,095 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:09:18,095 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:09:18,096 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:09:18,096 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:09:51,075 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:09:51,075 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:09:51,076 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:09:51,076 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:09:57,773 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:09:57,785 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-02 22:09:57,786 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 22:10:01,683 | INFO     | CommandManager | Executing command 'restart'.
+2026-08-02 22:10:01,683 | INFO     | RestartApplicationHandler | Restarting application 'calculator'.
+2026-08-02 22:10:01,683 | INFO     | ApplicationService | Restarting application 'calculator'.
+2026-08-02 22:10:01,684 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-02 22:10:01,722 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-02 22:10:01,722 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 22:10:06,891 | INFO     | CommandManager | Executing command 'status'.
+2026-08-02 22:10:09,328 | INFO     | CommandManager | Executing command 'status'.
+2026-08-02 22:10:12,333 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 22:10:12,334 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-08-02 22:10:12,334 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-02 22:10:12,368 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-02 22:10:21,120 | INFO     | CommandManager | Executing command 'help'.
+2026-08-02 22:10:23,886 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:10:23,886 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 59, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 156, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\find_file_handler.py", line 38, in execute
+    raise ValueError(
+        "Usage: find <file_name>"
+    )
+ValueError: Usage: find <file_name>
+2026-08-02 22:10:40,383 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:10:40,383 | INFO     | FileManager | Searching for 'main.py'.
+2026-08-02 22:10:40,386 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:10:40,386 | INFO     | FileService | Searching 'main.py' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:10:40,387 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:10:40,387 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:10:40,388 | INFO     | FileService | Searching 'main.py' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:10:40,389 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:10:40,390 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:10:40,390 | INFO     | FileService | Searching 'main.py' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:10:40,390 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:10:40,391 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:10:40,391 | INFO     | FileService | Searching 'main.py' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:10:40,396 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:10:40,396 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:10:40,396 | INFO     | FileService | Searching 'main.py' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:10:40,397 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:11:13,130 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-02 22:11:13,130 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-02 22:14:19,734 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:14:19,734 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:14:19,735 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:14:19,735 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:14:22,044 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:14:22,044 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 59, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 156, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\find_file_handler.py", line 38, in execute
+    raise ValueError(
+        "Usage: find <file_name>"
+    )
+ValueError: Usage: find <file_name>
+2026-08-02 22:14:29,598 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:14:29,617 | INFO     | OpenCommandHandler | Opening application 'notepad'.
+2026-08-02 22:14:29,617 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-08-02 22:14:33,601 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 22:14:33,602 | INFO     | CloseApplicationHandler | Closing application 'notepad'.
+2026-08-02 22:14:33,603 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-08-02 22:14:33,653 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-08-02 22:14:37,695 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:14:37,695 | INFO     | FileManager | Searching for 'test.txt'.
+2026-08-02 22:14:37,697 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:14:37,697 | INFO     | FileService | Searching 'test.txt' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:14:37,698 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:14:37,698 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:14:37,698 | INFO     | FileService | Searching 'test.txt' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:14:37,699 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:37,700 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:14:37,700 | INFO     | FileService | Searching 'test.txt' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:14:37,700 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:37,700 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:14:37,700 | INFO     | FileService | Searching 'test.txt' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:14:37,702 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:37,702 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:14:37,702 | INFO     | FileService | Searching 'test.txt' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:14:37,702 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:37,702 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt.txt'.
+2026-08-02 22:14:37,703 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt.txt'.
+2026-08-02 22:14:52,552 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:14:52,553 | INFO     | FileManager | Searching for 'txt'.
+2026-08-02 22:14:52,554 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:14:52,554 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:14:52,555 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:14:52,555 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:14:52,555 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:14:52,556 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:52,557 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:14:52,557 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:14:52,557 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:52,558 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:14:52,558 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:14:52,560 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:52,560 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:14:52,560 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:14:52,561 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:14:52,561 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt.txt'.
+2026-08-02 22:14:52,561 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt.txt'.
+2026-08-02 22:15:25,893 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:15:25,894 | INFO     | FileManager | Searching for 'txt'.
+2026-08-02 22:15:25,895 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:15:25,895 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:15:25,896 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:15:25,896 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:15:25,896 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:15:25,897 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:25,898 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:15:25,898 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:15:25,898 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:25,899 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:15:25,899 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:15:25,901 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:25,901 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:15:25,901 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:15:25,902 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:25,902 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt.txt'.
+2026-08-02 22:15:25,902 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt.txt'.
+2026-08-02 22:15:57,184 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:15:57,184 | INFO     | FileManager | Searching for 'txt'.
+2026-08-02 22:15:57,185 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:15:57,185 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:15:57,186 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:15:57,186 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:15:57,186 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:15:57,187 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:57,188 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:15:57,188 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:15:57,188 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:57,189 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:15:57,189 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:15:57,191 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:57,191 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:15:57,192 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:15:57,192 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:15:57,192 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt'.
+2026-08-02 22:15:57,192 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt'.
+2026-08-02 22:16:16,704 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:16:16,704 | INFO     | FileManager | Searching for 'txt'.
+2026-08-02 22:16:16,705 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:16:16,705 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:16:16,706 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:16:16,706 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:16:16,707 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:16:16,708 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:16,708 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:16:16,708 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:16:16,709 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:16,709 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:16:16,709 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:16:16,711 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:16,711 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:16:16,712 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:16:16,712 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:16,712 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt'.
+2026-08-02 22:16:16,713 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt'.
+2026-08-02 22:16:27,857 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:16:27,857 | INFO     | FileManager | Searching for 'test'.
+2026-08-02 22:16:27,858 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:16:27,858 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:16:27,859 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:16:27,859 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:16:27,859 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:16:27,860 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:27,860 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:16:27,861 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:16:27,861 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:27,861 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:16:27,861 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:16:27,863 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:27,863 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:16:27,863 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:16:27,864 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:27,864 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt'.
+2026-08-02 22:16:27,864 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\test.txt'.
+2026-08-02 22:16:33,925 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:16:33,925 | INFO     | FileManager | Searching for 'pdf'.
+2026-08-02 22:16:33,926 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:16:33,927 | INFO     | FileService | Searching 'pdf' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:16:33,928 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:33,928 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:16:33,928 | INFO     | FileService | Searching 'pdf' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:16:33,929 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:33,930 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:16:33,930 | INFO     | FileService | Searching 'pdf' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:16:33,930 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:33,931 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:16:33,931 | INFO     | FileService | Searching 'pdf' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:16:33,932 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:33,932 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:16:33,933 | INFO     | FileService | Searching 'pdf' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:16:33,933 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:33,934 | INFO     | BrowserService | Opening URL 'https://pdf'.
+2026-08-02 22:16:42,569 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:16:42,569 | INFO     | FileManager | Searching for 'google.com'.
+2026-08-02 22:16:42,570 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:16:42,571 | INFO     | FileService | Searching 'google.com' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:16:42,571 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:42,572 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:16:42,572 | INFO     | FileService | Searching 'google.com' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:16:42,573 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:42,573 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:16:42,573 | INFO     | FileService | Searching 'google.com' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:16:42,574 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:42,574 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:16:42,574 | INFO     | FileService | Searching 'google.com' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:16:42,576 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:42,576 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:16:42,576 | INFO     | FileService | Searching 'google.com' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:16:42,577 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:16:42,577 | INFO     | BrowserService | Opening URL 'https://google.com'.
+2026-08-02 22:17:08,296 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:17:08,299 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-02 22:17:08,299 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 22:17:15,001 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 22:17:20,905 | INFO     | CommandManager | Executing command 'restart'.
+2026-08-02 22:17:29,459 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 22:17:29,461 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-08-02 22:17:29,462 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-02 22:17:29,504 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-02 22:17:33,631 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 22:17:39,177 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:17:39,177 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 59, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 156, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\find_file_handler.py", line 38, in execute
+    raise ValueError(
+        "Usage: find <file_name>"
+    )
+ValueError: Usage: find <file_name>
+2026-08-02 22:18:01,873 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:18:01,874 | INFO     | FileManager | Searching for 'test'.
+2026-08-02 22:18:01,875 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:18:01,875 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:18:01,876 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:18:01,876 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:18:01,876 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:18:01,877 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:18:01,877 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:18:01,878 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:18:01,878 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:18:01,878 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:18:01,879 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:18:01,881 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:18:01,881 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:18:01,881 | INFO     | FileService | Searching 'test' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:18:01,882 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:18:10,335 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:18:10,335 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 59, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 156, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\find_file_handler.py", line 38, in execute
+    raise ValueError(
+        "Usage: find <file_name>"
+    )
+ValueError: Usage: find <file_name>
+2026-08-02 22:18:20,278 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:20:55,661 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:20:55,661 | ERROR    | ConsoleInterface | Unexpected error while executing command.
+Traceback (most recent call last):
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\interfaces\console.py", line 59, in run
+    self._command_manager.execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        command
+        ^^^^^^^
+    )
+    ^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\manager.py", line 156, in execute
+    command_info.handler.execute(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "d:\MyProjects\Vasu-AI-Assitant\assistant\commands\handlers\find_file_handler.py", line 38, in execute
+        command,
+        "find <file_name>",
+    )
+ValueError: Usage: find <file_name>
+2026-08-02 22:21:03,310 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-02 22:21:03,310 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-02 22:21:12,672 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:21:12,672 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:21:12,672 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:21:12,672 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:21:14,346 | INFO     | CommandManager | Executing command 'find'.
+2026-08-02 22:22:52,067 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:22:52,068 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:22:52,068 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:22:52,068 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:22:56,067 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:22:56,067 | INFO     | FileManager | Searching for 'download'.
+2026-08-02 22:22:56,068 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:22:56,068 | INFO     | FileService | Searching 'download' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:22:56,068 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:22:56,069 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:22:56,069 | INFO     | FileService | Searching 'download' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:22:56,069 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:22:56,070 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:22:56,070 | INFO     | FileService | Searching 'download' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:22:56,070 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:22:56,071 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:22:56,071 | INFO     | FileService | Searching 'download' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:22:56,072 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:22:56,072 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:22:56,072 | INFO     | FileService | Searching 'download' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:22:56,072 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:22:56,073 | INFO     | BrowserService | Opening URL 'https://download'.
+2026-08-02 22:23:02,131 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:23:02,131 | INFO     | FileManager | Searching for 'downloads'.
+2026-08-02 22:23:02,132 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:23:02,132 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:23:02,133 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:23:02,133 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:23:02,133 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:23:02,134 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:23:02,134 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:23:02,135 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:23:02,135 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:23:02,135 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:23:02,136 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:23:02,138 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:23:02,138 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:23:02,138 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:23:02,139 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:23:02,139 | INFO     | BrowserService | Opening URL 'https://downloads'.
+2026-08-02 22:25:23,782 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:25:23,783 | INFO     | FileManager | Searching for 'downalods'.
+2026-08-02 22:25:23,784 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:25:23,784 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:25:23,785 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:23,785 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:25:23,785 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:25:23,788 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:23,789 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:25:23,790 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:25:23,791 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:23,791 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:25:23,792 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:25:23,802 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:23,802 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:25:23,803 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:25:23,804 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:23,804 | INFO     | BrowserService | Opening URL 'https://downalods'.
+2026-08-02 22:25:32,083 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:25:32,083 | INFO     | FileManager | Searching for 'downloads'.
+2026-08-02 22:25:32,084 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:25:32,085 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:25:32,085 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:25:32,086 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:25:32,086 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:25:32,087 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:32,087 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:25:32,087 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:25:32,088 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:32,088 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:25:32,088 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:25:32,091 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:32,091 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:25:32,091 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:25:32,092 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:25:32,092 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\downloads'.
+2026-08-02 22:25:32,092 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\downloads'.
+2026-08-02 22:27:18,353 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:27:18,369 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-02 22:27:18,369 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 22:27:26,868 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:27:26,869 | INFO     | FileManager | Searching for 'clc.txt'.
+2026-08-02 22:27:26,870 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:27:26,870 | INFO     | FileService | Searching 'clc.txt' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:27:26,871 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:27:26,871 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:27:26,871 | INFO     | FileService | Searching 'clc.txt' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:27:26,872 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:27:26,872 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:27:26,873 | INFO     | FileService | Searching 'clc.txt' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:27:26,873 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:27:26,874 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:27:26,874 | INFO     | FileService | Searching 'clc.txt' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:27:26,876 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:27:26,876 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:27:26,876 | INFO     | FileService | Searching 'clc.txt' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:27:26,877 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:27:26,877 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\clc.txt'.
+2026-08-02 22:27:26,877 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\clc.txt'.
+2026-08-02 22:37:33,239 | INFO     | BrowserService | Searching Google for 'python decorators'.
+2026-08-02 22:43:25,939 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:43:25,939 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:43:25,940 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:43:25,940 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:43:29,189 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:43:29,202 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-02 22:43:29,202 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-02 22:43:35,389 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:43:35,389 | INFO     | FileManager | Searching for 'vscode'.
+2026-08-02 22:43:35,390 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:43:35,391 | INFO     | FileService | Searching 'vscode' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:43:35,391 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:43:35,392 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:43:35,392 | INFO     | FileService | Searching 'vscode' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:43:35,393 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:43:35,393 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:43:35,393 | INFO     | FileService | Searching 'vscode' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:43:35,394 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:43:35,394 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:43:35,394 | INFO     | FileService | Searching 'vscode' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:43:35,397 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:43:35,397 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:43:35,397 | INFO     | FileService | Searching 'vscode' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:43:35,398 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:43:35,398 | INFO     | BrowserService | Opening URL 'https://vscode'.
+2026-08-02 22:44:18,019 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:44:18,019 | INFO     | FileManager | Searching for 'downalods'.
+2026-08-02 22:44:18,020 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:44:18,020 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:44:18,021 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:18,021 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:44:18,021 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:44:18,022 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:18,022 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:44:18,022 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:44:18,022 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:18,022 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:44:18,023 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:44:18,024 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:18,024 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:44:18,024 | INFO     | FileService | Searching 'downalods' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:44:18,024 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:18,024 | INFO     | BrowserService | Opening URL 'https://downalods'.
+2026-08-02 22:44:25,076 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:44:25,076 | INFO     | FileManager | Searching for 'downloads'.
+2026-08-02 22:44:25,077 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:44:25,077 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:44:25,078 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:44:25,078 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:44:25,078 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:44:25,079 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:25,079 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:44:25,079 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:44:25,080 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:25,080 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:44:25,080 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:44:25,081 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:25,081 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:44:25,082 | INFO     | FileService | Searching 'downloads' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:44:25,082 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:25,082 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\downloads'.
+2026-08-02 22:44:25,082 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\downloads'.
+2026-08-02 22:44:36,189 | INFO     | CommandManager | Executing command 'open'.
+2026-08-02 22:44:36,189 | INFO     | FileManager | Searching for 'txt'.
+2026-08-02 22:44:36,190 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-02 22:44:36,190 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-02 22:44:36,191 | INFO     | FileService | Found 1 matching item(s).
+2026-08-02 22:44:36,191 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-02 22:44:36,191 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Documents'.
+2026-08-02 22:44:36,192 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:36,192 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-02 22:44:36,192 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Downloads'.
+2026-08-02 22:44:36,192 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:36,192 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-02 22:44:36,193 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-02 22:44:36,194 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:36,194 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-02 22:44:36,194 | INFO     | FileService | Searching 'txt' under 'C:\Users\Dell\Videos'.
+2026-08-02 22:44:36,194 | INFO     | FileService | Found 0 matching item(s).
+2026-08-02 22:44:36,194 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\OneDrive\Desktop\clc.txt'.
+2026-08-02 22:44:36,194 | INFO     | FileService | Opening file 'C:\Users\Dell\OneDrive\Desktop\clc.txt'.
+2026-08-02 22:44:41,918 | INFO     | CommandManager | Executing command 'status'.
+2026-08-02 22:44:48,448 | INFO     | CommandManager | Executing command 'close'.
+2026-08-02 22:44:48,449 | INFO     | CloseApplicationHandler | Closing application 'notepad'.
+2026-08-02 22:44:48,450 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-08-02 22:44:48,500 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-08-02 22:45:06,771 | INFO     | CommandManager | Executing command 'search'.
+2026-08-02 22:45:15,898 | INFO     | CommandManager | Executing command 'search'.
+2026-08-02 22:45:15,898 | INFO     | SearchCommandHandler | Searching Google for 'python'.
+2026-08-02 22:45:15,898 | INFO     | BrowserService | Searching Google for 'python'.
+2026-08-02 22:45:32,692 | INFO     | CommandManager | Executing command 'search'.
+2026-08-02 22:45:32,692 | INFO     | SearchCommandHandler | Searching Google for 'python'.
+2026-08-02 22:45:32,692 | INFO     | BrowserService | Searching Google for 'python'.
+2026-08-02 22:45:51,269 | INFO     | CommandManager | Executing command 'search'.
+2026-08-02 22:45:51,269 | INFO     | SearchCommandHandler | Searching Google for 'i'.
+2026-08-02 22:45:51,269 | INFO     | BrowserService | Searching Google for 'i'.
+2026-08-02 22:52:37,986 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-02 22:52:37,986 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-02 22:52:44,789 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:52:44,789 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:52:44,789 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:52:44,789 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:52:51,795 | INFO     | CommandManager | Executing command 'search'.
+2026-08-02 22:52:51,795 | INFO     | SearchCommandHandler | Searching Google for 'python decorators'.
+2026-08-02 22:52:51,795 | INFO     | BrowserService | Searching Google for 'python decorators'.
+2026-08-02 22:58:22,404 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-02 22:58:22,404 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-02 22:58:26,682 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 22:58:26,683 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 22:58:26,683 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 22:58:26,683 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 22:58:39,631 | INFO     | CommandManager | Executing command 'search'.
+2026-08-02 22:58:39,632 | INFO     | SearchCommandHandler | Searching Google for 'code with haryy'.
+2026-08-02 22:58:39,632 | INFO     | BrowserService | Searching Google for 'code with haryy'.
+2026-08-02 23:04:17,173 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-02 23:04:17,174 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-02 23:04:31,998 | INFO     | BrowserService | Playing 'believer imagine dragons' on YouTube.
+2026-08-02 23:06:55,299 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 23:06:55,300 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 23:06:55,300 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 23:06:55,300 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 23:07:00,766 | INFO     | CommandManager | Executing command 'play'.
+2026-08-02 23:07:00,767 | INFO     | PlayCommandHandler | Playing 'code with harry'.
+2026-08-02 23:07:00,767 | INFO     | BrowserService | Playing 'code with harry' on YouTube.
+2026-08-02 23:07:13,201 | INFO     | CommandManager | Executing command 'play'.
+2026-08-02 23:07:13,201 | INFO     | PlayCommandHandler | Playing 'chota bheem'.
+2026-08-02 23:07:13,201 | INFO     | BrowserService | Playing 'chota bheem' on YouTube.
+2026-08-02 23:07:19,018 | INFO     | CommandManager | Executing command 'play'.
+2026-08-02 23:07:22,905 | INFO     | CommandManager | Executing command 'search'.
+2026-08-02 23:07:34,268 | INFO     | CommandManager | Executing command 'play'.
+2026-08-02 23:07:34,269 | INFO     | PlayCommandHandler | Playing 'howcast'.
+2026-08-02 23:07:34,269 | INFO     | BrowserService | Playing 'howcast' on YouTube.
+2026-08-02 23:13:49,141 | INFO     | SystemService | Locking Windows session.
+2026-08-02 23:21:08,246 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 23:21:08,246 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 23:21:08,246 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 23:21:08,246 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 23:21:23,946 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-02 23:21:23,946 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-02 23:21:23,946 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-02 23:21:23,946 | INFO     | ConsoleInterface | Console interface started.
+2026-08-02 23:21:25,811 | INFO     | CommandManager | Executing command 'lock'.
+2026-08-02 23:21:25,811 | INFO     | LockCommandHandler | Locking workstation.
+2026-08-02 23:21:25,811 | INFO     | SystemService | Locking Windows session.
+2026-08-02 23:23:54,867 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-02 23:23:54,867 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-02 23:24:00,714 | INFO     | SystemService | Putting computer to sleep.
+2026-08-03 22:51:19,884 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-03 22:51:19,885 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-03 22:51:19,885 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-03 22:51:19,885 | INFO     | ConsoleInterface | Console interface started.
+2026-08-03 22:51:23,382 | INFO     | CommandManager | Executing command 'lock'.
+2026-08-03 22:51:23,382 | INFO     | LockCommandHandler | Locking workstation.
+2026-08-03 22:51:23,382 | INFO     | SystemService | Locking Windows session.
+2026-08-03 22:53:27,874 | INFO     | CommandManager | Executing command 'help'.
+2026-08-03 22:57:35,026 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-03 22:57:35,026 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-03 22:57:42,500 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-03 22:57:42,501 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-03 22:57:42,501 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-03 22:57:42,501 | INFO     | ConsoleInterface | Console interface started.
+2026-08-03 22:57:53,063 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-03 22:57:53,063 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-03 22:58:40,260 | INFO     | SystemService | Putting computer to sleep.
+2026-08-03 23:07:49,488 | INFO     | SystemService | Shutting down computer.
+2026-08-03 23:28:36,465 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-03 23:28:36,466 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-03 23:28:36,467 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-03 23:28:36,467 | INFO     | ConsoleInterface | Console interface started.
+2026-08-03 23:28:40,679 | INFO     | CommandManager | Executing command 'shutdown'.
+2026-08-03 23:28:40,680 | INFO     | ShutdownCommandHandler | Shutting down system...
+2026-08-03 23:28:40,680 | INFO     | SystemService | Shutting down computer.
+2026-08-03 23:59:33,753 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-03 23:59:33,753 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-03 23:59:33,754 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-03 23:59:33,754 | INFO     | ConsoleInterface | Console interface started.
+2026-08-03 23:59:40,711 | INFO     | CommandManager | Executing command 'open'.
+2026-08-03 23:59:40,721 | INFO     | OpenCommandHandler | Opening application 'notepad'.
+2026-08-03 23:59:40,721 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-08-03 23:59:48,717 | INFO     | CommandManager | Executing command 'restart'.
+2026-08-03 23:59:48,718 | INFO     | RestartApplicationHandler | Restarting application 'notepad'.
+2026-08-03 23:59:48,718 | INFO     | ApplicationService | Restarting application 'notepad'.
+2026-08-03 23:59:48,718 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-08-03 23:59:48,768 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-08-03 23:59:48,768 | INFO     | ApplicationService | Launching application 'notepad'.
+2026-08-03 23:59:52,711 | INFO     | CommandManager | Executing command 'close'.
+2026-08-03 23:59:52,713 | INFO     | CloseApplicationHandler | Closing application 'notepad'.
+2026-08-03 23:59:52,713 | INFO     | ApplicationService | Closing application 'notepad'.
+2026-08-03 23:59:52,766 | INFO     | ApplicationService | Application 'notepad' closed.
+2026-08-03 23:59:55,668 | INFO     | CommandManager | Executing command 'restart'.
+2026-08-03 23:59:58,575 | INFO     | CommandManager | Executing command 'restart'.
+2026-08-03 23:59:58,576 | INFO     | RestartApplicationHandler | Restarting computer.
+2026-08-03 23:59:58,576 | INFO     | SystemService | Restarting computer.
+2026-08-04 00:01:57,975 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-04 00:01:57,976 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-04 00:01:57,977 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-04 00:01:57,977 | INFO     | ConsoleInterface | Console interface started.
+2026-08-04 00:02:01,642 | INFO     | CommandManager | Executing command 'open'.
+2026-08-04 00:02:01,643 | INFO     | FileManager | Searching for 'chrome'.
+2026-08-04 00:02:01,643 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-04 00:02:01,643 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-04 00:02:01,644 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 00:02:01,644 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-04 00:02:01,645 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\Documents'.
+2026-08-04 00:02:01,646 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 00:02:01,646 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-04 00:02:01,646 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\Downloads'.
+2026-08-04 00:02:01,646 | INFO     | FileService | Found 1 matching item(s).
+2026-08-04 00:02:01,647 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-04 00:02:01,647 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-04 00:02:01,649 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 00:02:01,649 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-04 00:02:01,649 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\Videos'.
+2026-08-04 00:02:01,649 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 00:02:01,649 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\Downloads\ChromeSetup.exe'.
+2026-08-04 00:02:01,649 | INFO     | FileService | Opening file 'C:\Users\Dell\Downloads\ChromeSetup.exe'.
+2026-08-04 00:06:25,371 | INFO     | CommandManager | Executing command 'close'.
+2026-08-04 00:06:29,077 | INFO     | ConsoleInterface | Console interface stopped.
+2026-08-04 00:06:29,078 | INFO     | ApplicationController | Stopping VASU AI ASSISTANT...
+2026-08-04 00:11:18,171 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-04 00:11:18,172 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-04 00:11:18,172 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-04 00:11:18,172 | INFO     | ConsoleInterface | Console interface started.
+2026-08-04 00:11:20,956 | INFO     | CommandManager | Executing command 'help'.
+2026-08-04 01:00:00,774 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-04 01:00:00,775 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-04 01:00:00,775 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-04 01:00:00,775 | INFO     | ConsoleInterface | Console interface started.
+2026-08-04 01:00:10,053 | INFO     | CommandManager | Executing command 'open'.
+2026-08-04 01:00:10,068 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-04 01:00:10,069 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-04 01:00:22,940 | INFO     | CommandManager | Executing command 'close'.
+2026-08-04 01:00:44,935 | INFO     | CommandManager | Executing command 'open'.
+2026-08-04 01:00:44,938 | INFO     | OpenCommandHandler | Opening application 'calculator'.
+2026-08-04 01:00:44,938 | INFO     | ApplicationService | Launching application 'calculator'.
+2026-08-04 01:00:53,041 | INFO     | CommandManager | Executing command 'close'.
+2026-08-04 01:00:53,043 | INFO     | CloseApplicationHandler | Closing application 'calculator'.
+2026-08-04 01:00:53,043 | INFO     | ApplicationService | Closing application 'calculator'.
+2026-08-04 01:00:53,073 | INFO     | ApplicationService | Application 'calculator' closed.
+2026-08-04 01:03:54,363 | INFO     | ConfigurationManager | Configuration loaded successfully.
+2026-08-04 01:03:54,364 | INFO     | ApplicationManager | Loaded 2 applications.
+2026-08-04 01:03:54,365 | INFO     | ApplicationController | Starting VASU AI ASSISTANT...
+2026-08-04 01:03:54,365 | INFO     | ConsoleInterface | Console interface started.
+2026-08-04 01:04:01,881 | INFO     | CommandManager | Executing command 'open'.
+2026-08-04 01:04:01,882 | INFO     | FileManager | Searching for 'chrome'.
+2026-08-04 01:04:01,882 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-04 01:04:01,882 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-04 01:04:01,883 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:04:01,883 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-04 01:04:01,883 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\Documents'.
+2026-08-04 01:04:01,884 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:04:01,884 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-04 01:04:01,884 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\Downloads'.
+2026-08-04 01:04:01,884 | INFO     | FileService | Found 1 matching item(s).
+2026-08-04 01:04:01,884 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-04 01:04:01,884 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-04 01:04:01,887 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:04:01,887 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-04 01:04:01,888 | INFO     | FileService | Searching 'chrome' under 'C:\Users\Dell\Videos'.
+2026-08-04 01:04:01,888 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:04:01,888 | INFO     | OpenCommandHandler | Opening file 'C:\Users\Dell\Downloads\ChromeSetup.exe'.
+2026-08-04 01:04:01,888 | INFO     | FileService | Opening file 'C:\Users\Dell\Downloads\ChromeSetup.exe'.
+2026-08-04 01:07:07,099 | INFO     | CommandManager | Executing command 'find'.
+2026-08-04 01:07:07,100 | INFO     | FileManager | Searching for 'reportpdf'.
+2026-08-04 01:07:07,100 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-04 01:07:07,100 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-04 01:07:07,100 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:07,100 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-04 01:07:07,101 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\Documents'.
+2026-08-04 01:07:07,101 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:07,101 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-04 01:07:07,101 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\Downloads'.
+2026-08-04 01:07:07,101 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:07,102 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-04 01:07:07,102 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-04 01:07:07,103 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:07,103 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-04 01:07:07,103 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\Videos'.
+2026-08-04 01:07:07,103 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:16,244 | INFO     | CommandManager | Executing command 'find'.
+2026-08-04 01:07:16,244 | INFO     | FileManager | Searching for 'reportpdf'.
+2026-08-04 01:07:16,245 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Desktop
+2026-08-04 01:07:16,245 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\OneDrive\Desktop'.
+2026-08-04 01:07:16,245 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:16,245 | INFO     | FileManager | Searching location: C:\Users\Dell\Documents
+2026-08-04 01:07:16,245 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\Documents'.
+2026-08-04 01:07:16,246 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:16,246 | INFO     | FileManager | Searching location: C:\Users\Dell\Downloads
+2026-08-04 01:07:16,246 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\Downloads'.
+2026-08-04 01:07:16,246 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:16,246 | INFO     | FileManager | Searching location: C:\Users\Dell\OneDrive\Pictures
+2026-08-04 01:07:16,246 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\OneDrive\Pictures'.
+2026-08-04 01:07:16,248 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:16,248 | INFO     | FileManager | Searching location: C:\Users\Dell\Videos
+2026-08-04 01:07:16,248 | INFO     | FileService | Searching 'reportpdf' under 'C:\Users\Dell\Videos'.
+2026-08-04 01:07:16,248 | INFO     | FileService | Found 0 matching item(s).
+2026-08-04 01:07:24,615 | INFO     | CommandManager | Executing command 'search'.
+2026-08-04 01:07:24,615 | INFO     | SearchCommandHandler | Searching Google for 'python decorators'.
+2026-08-04 01:07:24,616 | INFO     | BrowserService | Searching Google for 'python decorators'.

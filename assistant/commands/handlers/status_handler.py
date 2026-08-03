@@ -9,7 +9,7 @@ from assistant.applications.service import ApplicationService
 from assistant.commands.handlers.base import BaseCommandHandler
 from assistant.commands.models import Command
 from assistant.core.logger import LoggerManager
-
+from assistant.commands.exceptions import InvalidCommandUsageError
 
 class StatusApplicationHandler(BaseCommandHandler):
     """
@@ -35,8 +35,8 @@ class StatusApplicationHandler(BaseCommandHandler):
     ) -> None:
 
         if command.target is None:
-            raise ValueError(
-                "No application specified."
+            raise InvalidCommandUsageError(
+                "Usage: status <application>"
             )
 
         application = self._application_manager.find(
