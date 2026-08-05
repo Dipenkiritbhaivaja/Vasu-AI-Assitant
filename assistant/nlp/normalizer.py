@@ -35,11 +35,6 @@ class Normalizer:
             if word in STOPWORDS:
                 continue
 
-            word = SYNONYMS.get(
-                word,
-                word,
-            )
-
             words.append(word)
 
         return " ".join(words)

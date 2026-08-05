@@ -55,11 +55,11 @@ class OpenCommandHandler(BaseCommandHandler):
         Execute the open command.
         """
 
-        target = self.require_target(
+        self.require_target(
             command,
             "open <application>",
         )
-
+        target = command.target_text
         try:
             result = (
                 self._application_resolver.resolve(

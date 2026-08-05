@@ -85,3 +85,57 @@ class FileService:
         )
 
         os.startfile(file.path)
+
+    def create_folder(
+        self,
+        name: str,
+    ) -> bool:
+        """
+        Create a folder in the current working directory.
+
+        Args:
+            name: Name of the folder.
+
+        Returns:
+            True if the folder was created successfully,
+            False otherwise.
+        """
+
+        folder_name = name.strip()
+
+        if not folder_name:
+            self._logger.warning(
+                "Folder name is empty."
+            )
+            return False
+
+        folder_path = Path.cwd() / folder_name
+
+        if folder_path.exists():
+            self._logger.warning(
+                "Folder '%s' already exists.",
+                folder_path,
+            )
+            return False
+
+        try:
+            folder_path.mkdir(
+                parents=True,
+                exist_ok=False,
+            )
+
+            self._logger.info(
+                "Folder created successfully: '%s'.",
+                folder_path,
+            )
+
+            return True
+
+        except OSError as error:
+            self._logger.exception(
+                "Failed to create folder '%s'.",
+                folder_path,
+                exc_info=error,
+            )
+
+            return False

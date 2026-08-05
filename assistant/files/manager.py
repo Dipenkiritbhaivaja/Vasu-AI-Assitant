@@ -77,3 +77,27 @@ class FileManager:
             return None
 
         return results[0]
+
+    def create_folder(
+        self,
+        name: str,
+    ) -> bool:
+        """
+        Create a folder.
+
+        Args:
+            name: Folder name.
+
+        Returns:
+            True if the folder was created successfully,
+            otherwise False.
+        """
+
+        self._logger.info(
+            "Creating folder '%s'.",
+            name,
+        )
+
+        return self._file_service.create_folder(
+            name,
+        )

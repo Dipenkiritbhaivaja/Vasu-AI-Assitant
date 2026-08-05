@@ -58,6 +58,9 @@ from assistant.commands.handlers.lock_command_handler import LockCommandHandler
 from assistant.commands.handlers.shutdown_command_handler import (
     ShutdownCommandHandler,
 )
+from assistant.commands.handlers.create_command_handler import (
+    CreateCommandHandler,
+)
 
 class CommandManager:
     """
@@ -168,6 +171,13 @@ class CommandManager:
                 ),
                 usage="shutdown",
                 description="Shut down the computer.",
+            ),
+            "create": CommandInfo(
+                handler=CreateCommandHandler(
+                    self._file_manager,
+                ),
+                usage="create folder <name>",
+                description="Create a new folder.",
             ),
         }
 

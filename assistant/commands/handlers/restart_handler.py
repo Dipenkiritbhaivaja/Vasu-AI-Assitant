@@ -36,10 +36,11 @@ class RestartApplicationHandler(BaseCommandHandler):
         command: Command,
     ) -> None:
 
-        target = self.require_target(
+        self.require_target(
             command,
             "restart <target>",
         )
+        target = command.target_text
 
         if target.lower() in {
             "pc",

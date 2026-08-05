@@ -34,10 +34,11 @@ class SearchCommandHandler(BaseCommandHandler):
         Execute the search command.
         """
 
-        target = self.require_target(
+        self.require_target(
             command,
             "search <query>",
         )
+        target = command.target_text
 
         query = command.text
 

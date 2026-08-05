@@ -41,3 +41,21 @@ class Command:
                 *self.arguments,
             ]
         )
+
+    @property
+    def target_text(
+        self,
+    ) -> str | None:
+
+        if self.target is None:
+            return None
+
+        if not self.arguments:
+            return self.target
+
+        return " ".join(
+            [
+                self.target,
+                *self.arguments,
+            ]
+        )

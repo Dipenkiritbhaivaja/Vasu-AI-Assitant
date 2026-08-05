@@ -34,10 +34,12 @@ class FindFileHandler(BaseCommandHandler):
         Execute the find command.
         """
 
-        target = self.require_target(
+        self.require_target(
             command,
             "find <file_name>",
         )
+
+        target = command.target_text
 
         results = self._file_manager.search(
             target,
