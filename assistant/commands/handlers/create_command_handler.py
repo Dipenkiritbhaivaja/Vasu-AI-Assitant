@@ -52,10 +52,29 @@ class CreateCommandHandler(
             "create <folder> <name>",
         )
 
-        if command.target != "folder":
-            raise InvalidCommandUsageError(
-                "Currently only 'create folder' is supported."
+        if command.target == "folder":
+            self._create_folder(
+                command,
             )
+            return
+
+        if command.target == "file":
+            self._create_file(
+                command,
+            )
+            return
+
+        raise InvalidCommandUsageError(
+            "Supported create targets are: folder, file."
+        )
+
+    def _create_folder(
+        self,
+        command: Command,
+    ) -> None:
+        """
+        Create a folder.
+        """
 
         if not command.arguments:
             raise InvalidCommandUsageError(
@@ -83,4 +102,40 @@ class CreateCommandHandler(
 
         print(
             f"\nFailed to create folder '{folder_name}'.\n"
+        )
+
+    def _create_file(
+        self,
+        command: Command,
+    ) -> None:
+        """
+        Create a file.
+        """
+
+        if not command.arguments:
+            raise InvalidCommandUsageError(
+                "Usage: create file <file_name>"
+            )
+
+        file_name = " ".join(
+            command.arguments
+        )
+
+        self._logger.info(
+            "Creating file '%s'.",
+            file_name,
+        )
+
+        created = self._file_manager.create_file(
+            file_name,
+        )
+
+        if created:
+            print(
+                f"\nFile '{file_name}' created successfully.\n"
+            )
+            return
+
+        print(
+            f"\nFailed to create file '{file_name}'.\n"
         )

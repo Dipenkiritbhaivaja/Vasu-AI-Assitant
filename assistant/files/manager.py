@@ -101,3 +101,27 @@ class FileManager:
         return self._file_service.create_folder(
             name,
         )
+
+    def create_file(
+        self,
+        name: str,
+    ) -> bool:
+        """
+        Create a file.
+
+        Args:
+            name: File name.
+
+        Returns:
+            True if the file was created successfully,
+            otherwise False.
+        """
+
+        self._logger.info(
+            "Creating file '%s'.",
+            name,
+        )
+
+        return self._file_service.create_file(
+            name,
+        )

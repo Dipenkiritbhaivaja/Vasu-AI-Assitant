@@ -139,3 +139,62 @@ class FileService:
             )
 
             return False
+
+    def create_file(
+        self,
+        name: str,
+    ) -> bool:
+        """
+        Create an empty file in the current
+        working directory.
+
+        Args:
+            name: File name.
+
+        Returns:
+            True if the file was created
+            successfully, otherwise False.
+        """
+
+        file_name = name.strip()
+
+        if not file_name:
+            self._logger.warning(
+                "File name is empty."
+            )
+            return False
+
+        file_path = Path.cwd() / file_name
+
+        if file_path.exists():
+            self._logger.warning(
+                "File '%s' already exists.",
+                file_path,
+            )
+            return False
+
+        try:
+            file_path.parent.mkdir(
+                parents=True,
+                exist_ok=True,
+            )
+
+            file_path.touch(
+                exist_ok=False,
+            )
+
+            self._logger.info(
+                "File created successfully: '%s'.",
+                file_path,
+            )
+
+            return True
+
+        except OSError as error:
+            self._logger.exception(
+                "Failed to create file '%s'.",
+                file_path,
+                exc_info=error,
+            )
+
+            return False

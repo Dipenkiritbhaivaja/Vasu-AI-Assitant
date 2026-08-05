@@ -4,11 +4,9 @@ Text normalization.
 
 from __future__ import annotations
 
-import re
 import string
 
 from assistant.nlp.stopwords import STOPWORDS
-from assistant.nlp.synonyms import SYNONYMS
 
 
 class Normalizer:
@@ -20,21 +18,26 @@ class Normalizer:
 
         text = text.lower()
 
-        text = text.translate(
-            str.maketrans(
-                "",
-                "",
-                string.punctuation,
-            )
-        )
+        punctuation = string.punctuation
 
         words = []
 
         for word in text.split():
 
+            word = word.strip(
+                punctuation,
+            )
+
+            if not word:
+                continue
+
             if word in STOPWORDS:
                 continue
 
-            words.append(word)
+            words.append(
+                word,
+            )
 
-        return " ".join(words)
+        return " ".join(
+            words,
+        )
