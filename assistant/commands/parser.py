@@ -20,9 +20,9 @@ class CommandParser:
         Parse user input into a Command.
         """
 
-        text = text.strip().lower()
+        text = text.strip()
 
-        parts = text.strip().split()
+        parts = text.split()
 
         if not parts:
             raise CommandParseError(
@@ -32,10 +32,10 @@ class CommandParser:
         action = parts[0].lower()
 
         target = None
-        arguments = []
+        arguments: list[str] = []
 
         if len(parts) >= 2:
-            target = parts[1]
+            target = parts[1].lower()
 
         if len(parts) >= 3:
             arguments = parts[2:]

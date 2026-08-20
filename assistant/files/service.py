@@ -8,6 +8,8 @@ from __future__ import annotations
 
 from pathlib import Path
 import os
+import shutil
+
 from assistant.core.logger import LoggerManager
 from assistant.files.models import FileInfo
 
@@ -89,16 +91,19 @@ class FileService:
     def create_folder(
         self,
         name: str,
+        destination: Path | None = None,
     ) -> bool:
         """
-        Create a folder in the current working directory.
+        Create a folder.
 
         Args:
-            name: Name of the folder.
+            name: Folder name.
+            destination: Directory where the folder should be created.
+                Defaults to the current working directory.
 
         Returns:
             True if the folder was created successfully,
-            False otherwise.
+            otherwise False.
         """
 
         folder_name = name.strip()
@@ -109,7 +114,10 @@ class FileService:
             )
             return False
 
-        folder_path = Path.cwd() / folder_name
+        if destination is None:
+            destination = Path.cwd()
+
+        folder_path = destination / folder_name
 
         if folder_path.exists():
             self._logger.warning(
@@ -119,8 +127,12 @@ class FileService:
             return False
 
         try:
-            folder_path.mkdir(
+            folder_path.parent.mkdir(
                 parents=True,
+                exist_ok=True,
+            )
+
+            folder_path.mkdir(
                 exist_ok=False,
             )
 
@@ -140,20 +152,23 @@ class FileService:
 
             return False
 
+
     def create_file(
         self,
         name: str,
+        destination: Path | None = None,
     ) -> bool:
         """
-        Create an empty file in the current
-        working directory.
+        Create an empty file.
 
         Args:
             name: File name.
+            destination: Directory where the file should be created.
+                Defaults to the current working directory.
 
         Returns:
-            True if the file was created
-            successfully, otherwise False.
+            True if the file was created successfully,
+            otherwise False.
         """
 
         file_name = name.strip()
@@ -164,7 +179,10 @@ class FileService:
             )
             return False
 
-        file_path = Path.cwd() / file_name
+        if destination is None:
+            destination = Path.cwd()
+
+        file_path = destination / file_name
 
         if file_path.exists():
             self._logger.warning(
@@ -194,6 +212,257 @@ class FileService:
             self._logger.exception(
                 "Failed to create file '%s'.",
                 file_path,
+                exc_info=error,
+            )
+
+            return False
+
+
+    def delete(
+        self,
+        path: Path,
+    ) -> bool:
+        """
+        Delete a file or an empty directory.
+
+        Args:
+            path: File or directory to delete.
+
+        Returns:
+            True if the item was deleted successfully,
+            otherwise False.
+        """
+
+        if not path.exists():
+            self._logger.warning(
+                "Cannot delete '%s': item does not exist.",
+                path,
+            )
+            return False
+
+        try:
+
+            if path.is_dir():
+
+                path.rmdir()
+
+                self._logger.info(
+                    "Directory deleted successfully: '%s'.",
+                    path,
+                )
+
+            else:
+
+                path.unlink()
+
+                self._logger.info(
+                    "File deleted successfully: '%s'.",
+                    path,
+                )
+
+            return True
+
+        except OSError as error:
+
+            self._logger.exception(
+                "Failed to delete '%s'.",
+                path,
+                exc_info=error,
+            )
+
+            return False
+
+    def rename(
+        self,
+        source: Path,
+        destination: Path,
+    ) -> bool:
+        """
+        Rename a file or directory.
+
+        Args:
+            source: Existing file or directory.
+            destination: New file or directory path.
+
+        Returns:
+            True if the item was renamed successfully,
+            otherwise False.
+        """
+
+        if not source.exists():
+            self._logger.warning(
+                "Cannot rename '%s': item does not exist.",
+                source,
+            )
+            return False
+
+        if destination.exists():
+            self._logger.warning(
+                "Cannot rename '%s': destination '%s' already exists.",
+                source,
+                destination,
+            )
+            return False
+
+        try:
+            source.rename(
+                destination,
+            )
+
+            self._logger.info(
+                "Renamed '%s' to '%s'.",
+                source,
+                destination,
+            )
+
+            return True
+
+        except OSError as error:
+            self._logger.exception(
+                "Failed to rename '%s' to '%s'.",
+                source,
+                destination,
+                exc_info=error,
+            )
+
+            return False
+
+    def copy(
+        self,
+        source: Path,
+        destination: Path,
+    ) -> bool:
+        """
+        Copy a file or directory.
+
+        Args:
+            source: Existing file or directory.
+            destination: Destination file or directory path.
+
+        Returns:
+            True if the item was copied successfully,
+            otherwise False.
+        """
+
+        if not source.exists():
+            self._logger.warning(
+                "Cannot copy '%s': item does not exist.",
+                source,
+            )
+            return False
+
+        if destination.exists():
+            self._logger.warning(
+                "Cannot copy '%s': destination '%s' already exists.",
+                source,
+                destination,
+            )
+            return False
+
+        try:
+
+            if source.is_dir():
+
+                shutil.copytree(
+                    source,
+                    destination,
+                )
+
+                self._logger.info(
+                    "Directory copied successfully: '%s' to '%s'.",
+                    source,
+                    destination,
+                )
+
+            else:
+
+                destination.parent.mkdir(
+                    parents=True,
+                    exist_ok=True,
+                )
+
+                shutil.copy2(
+                    source,
+                    destination,
+                )
+
+                self._logger.info(
+                    "File copied successfully: '%s' to '%s'.",
+                    source,
+                    destination,
+                )
+
+            return True
+
+        except OSError as error:
+
+            self._logger.exception(
+                "Failed to copy '%s' to '%s'.",
+                source,
+                destination,
+                exc_info=error,
+            )
+
+            return False
+
+    def move(
+        self,
+        source: Path,
+        destination: Path,
+    ) -> bool:
+        """
+        Move a file or directory.
+
+        Args:
+            source: Existing file or directory.
+            destination: Destination file or directory path.
+
+        Returns:
+            True if the item was moved successfully,
+            otherwise False.
+        """
+
+        if not source.exists():
+            self._logger.warning(
+                "Cannot move '%s': item does not exist.",
+                source,
+            )
+            return False
+
+        if destination.exists():
+            self._logger.warning(
+                "Cannot move '%s': destination '%s' already exists.",
+                source,
+                destination,
+            )
+            return False
+
+        try:
+
+            destination.parent.mkdir(
+                parents=True,
+                exist_ok=True,
+            )
+
+            shutil.move(
+                str(source),
+                str(destination),
+            )
+
+            self._logger.info(
+                "Moved '%s' to '%s'.",
+                source,
+                destination,
+            )
+
+            return True
+
+        except OSError as error:
+
+            self._logger.exception(
+                "Failed to move '%s' to '%s'.",
+                source,
+                destination,
                 exc_info=error,
             )
 

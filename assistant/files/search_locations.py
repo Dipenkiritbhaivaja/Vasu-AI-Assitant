@@ -13,6 +13,8 @@ def get_default_locations() -> list[Path]:
     home = Path.home()
 
     locations = [
+        Path.cwd(),
+
         home / "Desktop",
         home / "OneDrive" / "Desktop",
         home / "Documents",

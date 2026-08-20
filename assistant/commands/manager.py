@@ -58,8 +58,25 @@ from assistant.commands.handlers.lock_command_handler import LockCommandHandler
 from assistant.commands.handlers.shutdown_command_handler import (
     ShutdownCommandHandler,
 )
+
+from assistant.commands.handlers.rename_command_handler import (
+    RenameCommandHandler,
+)
+
+from assistant.commands.handlers.delete_command_handler import (
+    DeleteCommandHandler,
+)
+
 from assistant.commands.handlers.create_command_handler import (
     CreateCommandHandler,
+)
+
+from assistant.commands.handlers.copy_command_handler import (
+    CopyCommandHandler,
+)
+
+from assistant.commands.handlers.move_command_handler import (
+    MoveCommandHandler,
 )
 
 class CommandManager:
@@ -176,8 +193,36 @@ class CommandManager:
                 handler=CreateCommandHandler(
                     self._file_manager,
                 ),
-                usage="create folder <name>",
-                description="Create a new folder.",
+                usage="create <file|folder> <name>",
+                description="Create a new file or folder.",
+            ),
+            "delete": CommandInfo(
+                handler=DeleteCommandHandler(
+                    self._file_manager,
+                ),
+                usage="delete <file|folder> <name>",
+                description="Delete a file or an empty folder.",
+            ),
+            "rename": CommandInfo(
+                handler=RenameCommandHandler(
+                    self._file_manager,
+                ),
+                usage="rename <file|folder> <old_name> to <new_name>",
+                description="Rename a file or folder.",
+            ),
+            "copy": CommandInfo(
+                handler=CopyCommandHandler(
+                    self._file_manager,
+                ),
+                usage="copy <file|folder> <source> to <destination>",
+                description="Copy a file or folder.",
+            ),
+            "move": CommandInfo(
+                handler=MoveCommandHandler(
+                    self._file_manager,
+                ),
+                usage="move <file|folder> <source> to <destination>",
+                description="Move a file or folder.",
             ),
         }
 

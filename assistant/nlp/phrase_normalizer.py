@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+
 from assistant.nlp.phrases import PHRASES
 
 
@@ -10,12 +12,14 @@ class PhraseNormalizer:
         text: str,
     ) -> str:
 
-        normalized = text.lower()
+        normalized = text
 
         for phrase, replacement in PHRASES.items():
-            normalized = normalized.replace(
-                phrase,
-                replacement,
+            normalized = re.sub(
+                re.escape(phrase),
+                lambda _: replacement,
+                normalized,
+                flags=re.IGNORECASE,
             )
 
         return normalized

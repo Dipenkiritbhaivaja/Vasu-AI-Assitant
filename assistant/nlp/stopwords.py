@@ -14,7 +14,6 @@ STOPWORDS: set[str] = {
     "my",
     "me",
     "for",
-    "to",
     "you",
     "my",
 }

@@ -65,16 +65,10 @@ class NLPProcessor:
                 words[index + 1 :]
             )
 
-            normalized_remaining = (
-                self._normalizer.normalize(
-                    remaining,
-                )
-            )
-
-            if normalized_remaining:
+            if remaining:
                 return (
                     f"{normalized} "
-                    f"{normalized_remaining}"
+                    f"{remaining}"
                 )
 
             return normalized
